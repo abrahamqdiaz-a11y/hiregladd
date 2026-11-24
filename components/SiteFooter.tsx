@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { site } from "@/content/en/site";
-import { getIndustries } from "@/lib/industries";
+import { pageExists } from "@/lib/pages";
 import { isPlaceholder } from "@/lib/site";
 import { Logo } from "./Logo";
 
 export function SiteFooter() {
-  const industries = getIndustries();
   const year = new Date().getFullYear();
   const email = isPlaceholder(site.contactEmail) ? null : site.contactEmail;
   const phone = isPlaceholder(site.contactPhone) ? null : site.contactPhone;
@@ -39,32 +38,37 @@ export function SiteFooter() {
           </Link>
         </div>
 
-        <nav aria-label="Industries">
-          <h2 className="text-sm font-bold uppercase tracking-[0.14em] text-accent-glow">Industries</h2>
-          <ul className="mt-4 space-y-2 text-base">
-            {industries.map((i) => (
-              <li key={i.slug}>
-                <Link href={`/industries/${i.slug}/`} className={link}>{i.name}</Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <nav aria-label="Company">
-          <h2 className="text-sm font-bold uppercase tracking-[0.14em] text-accent-glow">Company</h2>
-          <ul className="mt-4 space-y-2 text-base">
-            <li><Link href="/about/" className={link}>About</Link></li>
-            <li><Link href="/contact/" className={link}>{site.ctaLabel}</Link></li>
-            <li><Link href="/privacy/" className={link}>{site.footer.privacy}</Link></li>
-          </ul>
-        </nav>
+        <FooterLinks title="Industries" links={site.footer.industries} />
+        <FooterLinks title="Company" links={site.footer.company} />
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col gap-1 px-5 py-6 text-sm text-white/70 sm:flex-row sm:justify-between sm:px-8">
           <p>© {year} HireGladd. All rights reserved.</p>
-          <p>{site.footer.parent}</p>
+          <p className="flex flex-wrap gap-x-4 gap-y-1">
+            <Link href="/privacy/" className="hover:text-white">{site.footer.privacy}</Link>
+            <span>{site.footer.parent}</span>
+          </p>
         </div>
       </div>
     </footer>
+  );
+}
+
+function FooterLinks({ title, links }: { title: string; links: { label: string; href: string }[] }) {
+  return (
+    <nav aria-label={title}>
+      <h2 className="text-sm font-bold uppercase tracking-[0.14em] text-accent-glow">{title}</h2>
+      <ul className="mt-4 space-y-2 text-base">
+        {links.map((l) => (
+          <li key={l.label}>
+            {pageExists(l.href) ? (
+              <Link href={l.href} className="text-white/80 hover:text-white">{l.label}</Link>
+            ) : (
+              <span className="text-white/80">{l.label}</span>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }

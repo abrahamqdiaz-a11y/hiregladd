@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { home, site } from "@/content/en/site";
-import { getIndustries } from "@/lib/industries";
 import { pageMetadata } from "@/lib/seo";
+import { pageExists } from "@/lib/pages";
 import { homeServicesSchema, faqSchema } from "@/lib/schema";
-import { Container, Section, H2, Eyebrow, ButtonLink, CheckList, IconBadge, Placeholder } from "@/components/ui";
+import { Container, Section, H2, ButtonLink, CheckList, IconBadge } from "@/components/ui";
 import { HowItWorks, FaqList, CtaBand, FeatureGrid } from "@/components/sections";
-import { IndustryCards } from "@/components/IndustryCards";
 import { JsonLd } from "@/components/JsonLd";
 import { Icon } from "@/components/Icon";
 
@@ -16,19 +15,14 @@ export const metadata = pageMetadata({
   absoluteTitle: true,
 });
 
-/** Illustration of an open-roles board. Example only, not real client data. */
+/** 2. Example tracker card. Illustration only, not real client data. */
 function RoleBoard() {
   const { board } = home.hero;
   return (
     <figure className="relative min-w-0">
       <div aria-hidden="true" className="absolute -inset-4 rounded-[2rem] bg-accent/30 blur-2xl" />
       <div className="relative rounded-3xl border border-white/15 bg-white p-5 text-ink shadow-2xl shadow-black/40 sm:p-7">
-        <div className="flex items-center justify-between">
-          <p className="text-lg font-extrabold">{board.title}</p>
-          <span className="rounded-full bg-accent-soft px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent">
-            {board.tag}
-          </span>
-        </div>
+        <p className="text-lg font-extrabold">{board.title}</p>
         <ul className="mt-5 space-y-3">
           {board.rows.map((r) => (
             <li key={r.role} className="flex items-center gap-4 rounded-2xl border border-line bg-wash p-3 sm:p-4">
@@ -46,18 +40,17 @@ function RoleBoard() {
           ))}
         </ul>
       </div>
-      <figcaption className="sr-only">Example of how we track your open roles.</figcaption>
+      <figcaption className="relative mt-4 text-center text-sm text-white/75">{board.caption}</figcaption>
     </figure>
   );
 }
 
 export default function HomePage() {
-  const industries = getIndustries();
-  const { hero, problem, hiring, office, compare, why } = home;
+  const { hero, problem, industries, whatYouGet, roles, promise, compare, office, why } = home;
 
   return (
     <>
-      {/* Hero */}
+      {/* 1. Hero (with 2. example tracker card) */}
       <section aria-labelledby="hero-heading" className="hero-dark on-dark overflow-hidden text-white">
         <Container className="grid grid-cols-1 items-center gap-12 py-16 sm:py-24 lg:grid-cols-[1.15fr_1fr] lg:gap-16 lg:py-28">
           <div>
@@ -77,7 +70,7 @@ export default function HomePage() {
                 {site.ctaLabel}
                 <Icon name="arrow" className="h-5 w-5" />
               </ButtonLink>
-              <ButtonLink href="/#hiring" variant="ghost-dark">
+              <ButtonLink href={`/#${roles.id}`} variant="ghost-dark">
                 {hero.secondaryCta}
               </ButtonLink>
             </div>
@@ -94,12 +87,9 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* The problem */}
+      {/* 3. The problem */}
       <Section labelledBy="problem-heading">
-        <div className="max-w-2xl">
-          <Eyebrow>{problem.eyebrow}</Eyebrow>
-          <H2 id="problem-heading">{problem.heading}</H2>
-        </div>
+        <H2 id="problem-heading">{problem.heading}</H2>
         <ul className="mt-12 grid gap-5 md:grid-cols-3">
           {problem.items.map((item, i) => (
             <li key={item.title} className="relative overflow-hidden rounded-2xl border border-line bg-white p-6 shadow-sm sm:p-8">
@@ -108,7 +98,10 @@ export default function HomePage() {
               </span>
               <div className="relative">
                 <IconBadge name={item.icon} />
-                <h3 className="mt-5 text-xl font-extrabold">{item.title}</h3>
+                <h3 className="mt-5 text-xl font-extrabold">
+                  <span className="sr-only">{String(i + 1).padStart(2, "0")}. </span>
+                  {item.title}
+                </h3>
                 <p className="mt-2 text-muted">{item.body}</p>
               </div>
             </li>
@@ -119,15 +112,43 @@ export default function HomePage() {
         </p>
       </Section>
 
-      {/* Hiring: the main offer */}
-      <Section tone="dots" labelledBy="hiring-heading" id={hiring.id}>
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.25fr] lg:gap-16">
+      {/* 4. Industries */}
+      <Section tone="wash" labelledBy="industries-heading">
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <H2 id="industries-heading" className="max-w-2xl">{industries.heading}</H2>
+          {pageExists("/industries/") && (
+            <Link href="/industries/" className="inline-flex items-center gap-2 text-lg font-bold text-accent hover:text-accent-dark">
+              {industries.allLink}
+              <Icon name="arrow" className="h-5 w-5" />
+            </Link>
+          )}
+        </div>
+        <ul className="mt-10 grid gap-5 md:grid-cols-3">
+          {industries.cards.map((c) => (
+            <li key={c.name}>
+              <IndustryCard card={c} linked={pageExists(c.href)} />
+            </li>
+          ))}
+        </ul>
+        <p className="mt-8 text-lg text-muted">
+          {industries.notListedBefore}{" "}
+          <Link href="/contact/" className="font-bold text-accent underline underline-offset-4 hover:text-accent-dark">
+            {industries.notListedLink}
+          </Link>{" "}
+          {industries.notListedAfter}
+        </p>
+      </Section>
+
+      {/* 5. What you get */}
+      <Section labelledBy="get-heading" id={whatYouGet.id}>
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
           <div>
-            <Eyebrow>{hiring.eyebrow}</Eyebrow>
-            <H2 id="hiring-heading">{hiring.heading}</H2>
-            <p className="mt-5 text-lg text-muted sm:text-xl">{hiring.body}</p>
-            <ul className="mt-8 space-y-3">
-              {hiring.results.map((r) => (
+            <H2 id="get-heading">{whatYouGet.heading}</H2>
+            <p className="mt-5 text-lg text-muted sm:text-xl">{whatYouGet.body}</p>
+          </div>
+          <div>
+            <ul className="space-y-3">
+              {whatYouGet.points.map((r) => (
                 <li key={r.text} className="flex items-center gap-4 rounded-2xl bg-white p-4 font-bold shadow-sm ring-1 ring-line">
                   <IconBadge name={r.icon} />
                   {r.text}
@@ -141,52 +162,44 @@ export default function HomePage() {
               </ButtonLink>
             </div>
           </div>
-          <div className="grid gap-5 self-start sm:grid-cols-2 sm:items-start lg:grid-cols-1 xl:grid-cols-2">
-            {hiring.groups.map((g) => (
-              <div key={g.title} className="rounded-2xl border border-line bg-white p-6 shadow-sm sm:p-8">
-                <div className="flex items-center gap-4">
-                  <IconBadge name={g.icon} size="lg" />
-                  <h3 className="text-2xl font-extrabold">{g.title}</h3>
-                </div>
-                <ul className="mt-6 flex flex-wrap gap-2">
-                  {g.points.map((p) => (
-                    <li key={p} className="rounded-full border border-accent-line bg-accent-soft px-4 py-2 text-base font-semibold text-accent-dark">
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
         </div>
       </Section>
 
-      <HowItWorks showButton={false} />
-
-      {/* Office support: the smaller, second offer */}
-      <section id={office.id} aria-labelledby="office-heading" className="bg-paper pb-16 sm:pb-24">
-        <Container>
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent to-accent-dark p-6 text-white on-dark sm:p-10 md:flex md:items-center md:gap-12">
-            <div aria-hidden="true" className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10" />
-            <div className="relative md:w-1/2">
-              <IconBadge name={office.icon} dark />
-              <p className="mt-5 text-sm font-bold uppercase tracking-[0.14em] text-accent-glow">{office.eyebrow}</p>
-              <h2 id="office-heading" className="mt-2 text-3xl font-extrabold sm:text-4xl">{office.heading}</h2>
-              <p className="mt-3 text-lg text-white/85">{office.body}</p>
+      {/* 6. Roles we fill */}
+      <Section tone="dots" labelledBy="roles-heading" id={roles.id}>
+        <H2 id="roles-heading">{roles.heading}</H2>
+        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:items-start">
+          {roles.groups.map((g) => (
+            <div key={g.title} className="rounded-2xl border border-line bg-white p-6 shadow-sm sm:p-8">
+              <div className="flex items-center gap-4">
+                <IconBadge name={g.icon} size="lg" />
+                <h3 className="text-2xl font-extrabold">{g.title}</h3>
+              </div>
+              <ul className="mt-6 flex flex-wrap gap-2">
+                {g.points.map((p) => (
+                  <li key={p} className="rounded-full border border-accent-line bg-accent-soft px-4 py-2 text-base font-semibold text-accent-dark">
+                    {p}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <CheckList items={office.points} dark className="relative mt-8 text-lg font-semibold md:mt-0 md:w-1/2" />
-          </div>
-        </Container>
-      </section>
+          ))}
+        </div>
+      </Section>
 
-      {/* Why us: flat fee vs commission, plus other reasons */}
-      <Section tone="wash" labelledBy="why-heading">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-center lg:gap-16">
-          <div>
-            <Eyebrow>{compare.eyebrow}</Eyebrow>
-            <H2 id="why-heading">{compare.heading}</H2>
-            <p className="mt-5 text-lg text-muted sm:text-xl">{compare.body}</p>
-          </div>
+      {/* 7. How it works */}
+      <HowItWorks showButton={false} content={home.howItWorks} />
+
+      {/* 8. Our promise */}
+      <Section tone="wash" labelledBy="promise-heading">
+        <H2 id="promise-heading">{promise.heading}</H2>
+        <FeatureGrid items={promise.items} cols={3} />
+      </Section>
+
+      {/* 9. Comparison table */}
+      <Section labelledBy="compare-heading">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-center lg:gap-16">
+          <H2 id="compare-heading">{compare.heading}</H2>
           <div className="overflow-hidden rounded-2xl border border-line bg-white shadow-sm">
             <table className="w-full table-fixed text-left text-sm sm:text-base">
               <caption className="sr-only">Typical recruiter compared with HireGladd</caption>
@@ -219,56 +232,75 @@ export default function HomePage() {
             </table>
           </div>
         </div>
-        <FeatureGrid items={why.items} cols={3} />
       </Section>
 
-      {/* Industries */}
-      <Section labelledBy="industries-heading">
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-2xl">
-            <Eyebrow>{home.industries.eyebrow}</Eyebrow>
-            <H2 id="industries-heading">{home.industries.heading}</H2>
-            <p className="mt-4 text-lg text-muted">{home.industries.body}</p>
+      {/* 10. Office support */}
+      <section id={office.id} aria-labelledby="office-heading" className="bg-paper pb-16 sm:pb-24">
+        <Container>
+          <div className="on-dark relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent to-accent-dark p-6 text-white sm:p-10 md:flex md:items-center md:gap-12">
+            <div aria-hidden="true" className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10" />
+            <div className="relative md:w-1/2">
+              <IconBadge name={office.icon} dark />
+              <h2 id="office-heading" className="mt-5 text-3xl font-extrabold sm:text-4xl">{office.heading}</h2>
+              <p className="mt-3 text-lg text-white/85">{office.body}</p>
+            </div>
+            <div className="relative mt-8 md:mt-0 md:w-1/2">
+              <CheckList items={office.points} dark className="text-lg font-semibold" />
+              <ButtonLink href="/contact/" variant="inverse" className="mt-7">
+                {office.button}
+                <Icon name="arrow" className="h-5 w-5" />
+              </ButtonLink>
+            </div>
           </div>
-          <Link href="/industries/" className="inline-flex items-center gap-2 text-lg font-bold text-accent hover:text-accent-dark">
-            {home.industries.allLink}
-            <Icon name="arrow" className="h-5 w-5" />
-          </Link>
-        </div>
-        <IndustryCards industries={industries} linkLabel="See how we help" />
-      </Section>
+        </Container>
+      </section>
 
-      {/* Proof: hidden on the live site until real items are added */}
-      {home.proof.items.length > 0 ? (
-        <Section tone="wash" labelledBy="proof-heading">
-          <H2 id="proof-heading">{home.proof.heading}</H2>
-          <ul className="mt-10 grid gap-6 md:grid-cols-2">
-            {home.proof.items.map((p) => (
-              <li key={p.name + p.company}>
-                <figure className="h-full rounded-2xl border border-line bg-white p-6 shadow-sm sm:p-8">
-                  <Icon name="quote" className="h-8 w-8 text-accent" />
-                  <blockquote className="mt-4 text-lg">{p.quote}</blockquote>
-                  <figcaption className="mt-5 text-base">
-                    <strong>{p.name}</strong>, {p.company}
-                    {p.industry ? <span className="text-muted"> · {p.industry}</span> : null}
-                  </figcaption>
-                </figure>
-              </li>
-            ))}
-          </ul>
-        </Section>
-      ) : (
-        <div className="bg-paper pb-10">
-          <Container>
-            <Placeholder>{home.proof.placeholderNote}</Placeholder>
-          </Container>
-        </div>
-      )}
+      {/* 11. Why HireGladd */}
+      <section aria-label={why.label} className="bg-paper pb-16 sm:pb-24">
+        <Container>
+          <FeatureGrid items={why.items} cols={3} />
+        </Container>
+      </section>
 
-      <FaqList heading={home.faq.heading} items={home.faq.items} eyebrow={home.faq.eyebrow} aside={home.faq.aside} />
+      {/* 12. FAQ */}
+      <FaqList heading={home.faq.heading} items={home.faq.items} eyebrow={null} aside={null} />
+
+      {/* 13. Final call to action */}
       <CtaBand heading={home.finalCta.heading} body={home.finalCta.body} />
 
       <JsonLd data={[...homeServicesSchema(), faqSchema(home.faq.items)]} />
     </>
+  );
+}
+
+type Card = (typeof home.industries.cards)[number];
+
+/** Industry card. Same design as the industries page cards; unlinked if the page doesn't exist yet. */
+function IndustryCard({ card, linked }: { card: Card; linked: boolean }) {
+  const inner = (
+    <>
+      <span aria-hidden="true" className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-accent to-accent-glow" />
+      <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-accent-soft text-accent transition group-hover:bg-accent group-hover:text-white">
+        <Icon name={card.icon} className="h-7 w-7" />
+      </span>
+      <h3 className="mt-6 text-2xl font-extrabold">{card.name}</h3>
+      <p className="mt-2 flex-1 text-muted">{card.body}</p>
+      {linked && (
+        <span className="mt-6 inline-flex items-center gap-2 font-bold text-accent">
+          {card.linkLabel}
+          <Icon name="arrow" className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+        </span>
+      )}
+    </>
+  );
+  const base = "relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white p-6 shadow-sm sm:p-8";
+  if (!linked) return <div className={base}>{inner}</div>;
+  return (
+    <Link
+      href={card.href}
+      className={`group ${base} transition hover:-translate-y-1 hover:border-accent hover:shadow-xl hover:shadow-accent/10`}
+    >
+      {inner}
+    </Link>
   );
 }

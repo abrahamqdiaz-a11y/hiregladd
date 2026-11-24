@@ -4,19 +4,28 @@ import { Icon } from "./Icon";
 import { howItWorks, site } from "@/content/en/site";
 import type { FAQ } from "@/lib/types";
 
-export function HowItWorks({ tone = "white" as "white" | "wash", showButton = true }) {
+export function HowItWorks({
+  tone = "white",
+  showButton = true,
+  content = howItWorks,
+}: {
+  tone?: "white" | "wash";
+  showButton?: boolean;
+  /** Defaults to the shared copy used on industry pages. */
+  content?: { eyebrow?: string; heading: string; steps: { title: string; body: string }[] };
+}) {
   return (
     <Section tone={tone} labelledBy="how-heading" id="how-it-works">
       <div className="max-w-2xl">
-        <Eyebrow>{howItWorks.eyebrow}</Eyebrow>
-        <H2 id="how-heading">{howItWorks.heading}</H2>
+        {content.eyebrow && <Eyebrow>{content.eyebrow}</Eyebrow>}
+        <H2 id="how-heading">{content.heading}</H2>
       </div>
       <ol className="relative mt-12 grid gap-6 md:grid-cols-3 md:gap-8">
         <span
           aria-hidden="true"
           className="absolute left-[2.25rem] right-[2.25rem] top-9 hidden h-0.5 bg-gradient-to-r from-accent via-accent-line to-accent md:block"
         />
-        {howItWorks.steps.map((step, i) => (
+        {content.steps.map((step, i) => (
           <li key={step.title} className="relative rounded-2xl border border-line bg-white p-6 shadow-sm sm:p-8 md:border-0 md:bg-transparent md:p-0 md:shadow-none">
             <span
               className="relative inline-flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-2xl bg-gradient-to-br from-accent to-accent-dark text-3xl font-extrabold text-white shadow-lg shadow-accent/30 ring-8 ring-white"
@@ -54,20 +63,26 @@ export function FaqList({
   heading: string;
   items: FAQ[];
   id?: string;
-  eyebrow?: string;
-  aside?: string;
+  /** Pass null to hide. */
+  eyebrow?: string | null;
+  /** Pass null to hide the side note and its Book a call link. */
+  aside?: string | null;
 }) {
   return (
     <Section tone="wash" labelledBy={`${id}-heading`} id={id}>
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
         <div>
-          <Eyebrow>{eyebrow}</Eyebrow>
+          {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
           <H2 id={`${id}-heading`}>{heading}</H2>
-          <p className="mt-5 text-lg text-muted">{aside}</p>
-          <Link href="/contact/" className="mt-4 inline-flex items-center gap-2 text-lg font-bold text-accent hover:text-accent-dark">
-            {site.ctaLabel}
-            <Icon name="arrow" className="h-5 w-5" />
-          </Link>
+          {aside && (
+            <>
+              <p className="mt-5 text-lg text-muted">{aside}</p>
+              <Link href="/contact/" className="mt-4 inline-flex items-center gap-2 text-lg font-bold text-accent hover:text-accent-dark">
+                {site.ctaLabel}
+                <Icon name="arrow" className="h-5 w-5" />
+              </Link>
+            </>
+          )}
         </div>
         <div className="space-y-3">
           {items.map((item) => (

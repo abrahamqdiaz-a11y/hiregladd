@@ -25,62 +25,114 @@ export const site = {
     tagline: "Hiring for growing businesses, with office support when you need it.",
     parent: "An EchelonFox company",
     privacy: "Privacy policy",
+    /** A link is shown only if its page exists; otherwise the label shows as plain text. */
+    industries: [
+      { label: "Cleaning companies", href: "/cleaning-companies/" },
+      { label: "Roofing", href: "/industries/roofing/" },
+      { label: "HVAC, Plumbing & Electrical", href: "/industries/hvac-plumbing-electrical/" },
+    ],
+    company: [
+      { label: "How it works", href: "/#how-it-works" },
+      { label: "FAQ", href: "/#faq" },
+      { label: "Book a call", href: "/contact/" },
+    ],
   },
 };
 
 export const home = {
   seo: {
-    title: "HireGladd | Hiring and office support for growing businesses",
+    title: "HireGladd | Hiring for owner-run businesses",
     description:
-      "We find, screen and line up the field and office staff your business needs, for one flat monthly fee. No per-hire commissions. English and Spanish.",
+      "We find and screen the field and office staff you need, for one flat monthly fee. You only meet people worth your time.",
   },
   hero: {
-    eyebrow: "Hiring and office support for growing businesses",
+    eyebrow: "Hiring for growing businesses",
     headline: "We find your people.",
     headlineAccent: "You run your business.",
     subhead:
-      "HireGladd finds, screens and lines up the field and office staff you need, for one flat monthly fee. No per-hire commissions. We can run your office too.",
+      "HireGladd finds and screens the field and office staff you need, for one flat monthly fee. You only meet the people worth your time.",
     secondaryCta: "See the roles we fill",
-    points: ["One flat monthly fee", "No per-hire commissions", "English and Spanish"],
+    points: ["One flat monthly fee", "No per-hire fees", "English and Spanish"],
     /** Illustration only: shows what working with us looks like. Not real client data. */
     board: {
       title: "Your open roles",
-      tag: "Example",
+      caption: "Example of how we track your open roles.",
       rows: [
         { role: "Field technician", status: "Interview set", icon: "calendar" },
-        { role: "Customer service rep", status: "Shortlist ready", icon: "users" },
+        { role: "Cleaner, night shift", status: "Shortlist ready", icon: "sparkle" },
         { role: "Crew lead", status: "Screening", icon: "hardhat" },
-        { role: "Office coordinator", status: "Paperwork done", icon: "clipboard" },
+        { role: "Office coordinator", status: "Started Monday", icon: "clipboard" },
       ],
     },
   },
   problem: {
-    eyebrow: "The problem",
     heading: "Sound familiar?",
     items: [
       {
         icon: "users",
         title: "You're always hiring.",
-        body: "Someone quits, someone doesn't show, and you're back to posting ads again.",
+        body: "Someone quits, someone doesn't come back, and you're posting ads again.",
       },
       {
-        icon: "phone",
-        title: "There's no time to sort through people.",
-        body: "Applications pile up while you're busy running the business, and the good ones take another offer before you call back.",
+        icon: "chat",
+        title: "The story changes in the interview.",
+        body: "They said they had the experience. Then you sit down with them and hear something else.",
       },
       {
-        icon: "moon",
-        title: "The paperwork waits until night.",
-        body: "New-hire forms, follow-ups and invoices all get done at the kitchen table after a full day.",
+        icon: "calendar",
+        title: "They say yes, then don't show up.",
+        body: "You clear your morning for interviews, and no one comes.",
       },
     ],
     closer: "You started a business, not an HR department. We take hiring off your plate.",
   },
-  hiring: {
+  industries: {
+    heading: "Built for the businesses that hire the most",
+    allLink: "See all industries",
+    /**
+     * A card links only if its page exists. "/cleaning-companies/" has no page yet,
+     * so that card shows without a link until the page is added.
+     */
+    cards: [
+      {
+        name: "Cleaning companies",
+        icon: "sparkle",
+        body: "Cleaners, floor techs and team leads who show up, so you stop covering shifts yourself.",
+        href: "/cleaning-companies/",
+        linkLabel: "See how we help cleaning companies",
+      },
+      {
+        name: "Roofing",
+        icon: "roof",
+        body: "Roofers, laborers, crew leads and estimators, hired before your busy season, not during it.",
+        href: "/industries/roofing/",
+        linkLabel: "See how we help roofers",
+      },
+      {
+        name: "HVAC, Plumbing & Electrical",
+        icon: "wrench",
+        body: "Techs, apprentices and dispatchers, so your trucks stay on the road.",
+        href: "/industries/hvac-plumbing-electrical/",
+        linkLabel: "See how we help trade companies",
+      },
+    ],
+    notListedBefore: "Don't see your industry?",
+    notListedLink: "Book a call",
+    notListedAfter: "and ask.",
+  },
+  whatYouGet: {
     id: "hiring",
-    eyebrow: "Hiring",
-    heading: "We fill your open roles",
-    body: "We find, screen and line up candidates, so you only meet the ones worth your time. Then we handle the new-hire paperwork before day one.",
+    heading: "People worth meeting, not a pile of applications",
+    body: "We find people, talk to them first and only send you the ones who are ready to work. You interview, you decide.",
+    points: [
+      { icon: "check", text: "Screened before you ever talk to them" },
+      { icon: "calendar", text: "Interviews booked on your schedule" },
+      { icon: "refresh", text: "If a new hire leaves in their first 30 days, we replace them at no extra cost" },
+    ],
+  },
+  roles: {
+    id: "roles",
+    heading: "Roles we fill",
     groups: [
       {
         icon: "hardhat",
@@ -93,16 +145,57 @@ export const home = {
         points: ["Receptionists and customer service reps", "Dispatchers and schedulers", "Admin assistants and coordinators", "Estimators"],
       },
     ],
-    results: [
-      { icon: "check", text: "Screened candidates, not a stack of applications" },
-      { icon: "calendar", text: "Interviews set up on your schedule" },
-      { icon: "clipboard", text: "New-hire paperwork done before day one" },
+  },
+  howItWorks: {
+    heading: "Three simple steps",
+    steps: [
+      {
+        title: "A short call.",
+        body: "Tell us which roles you need to fill and what a good hire looks like for you.",
+      },
+      {
+        title: "We send you people worth meeting.",
+        body: "You interview them and make the final call. You run your usual background check, the same as you do now.",
+      },
+      {
+        title: "One flat monthly fee.",
+        body: "No per-hire fees and no surprise bills.",
+      },
+    ],
+  },
+  promise: {
+    heading: "We only win when you do",
+    items: [
+      {
+        icon: "refresh",
+        title: "Free replacement.",
+        body: "If a new hire leaves in their first 30 days, we find you someone else at no extra cost.",
+      },
+      {
+        icon: "tag",
+        title: "Nothing worth your time, no charge.",
+        body: "If we don't send you anyone worth interviewing in a month, you don't pay for that month.",
+      },
+      {
+        icon: "shield",
+        title: "No charge to job seekers.",
+        body: "Candidates never pay us anything, so good people are glad to work with us.",
+      },
+    ],
+  },
+  compare: {
+    heading: "One flat fee. Not a cut of every hire.",
+    columns: ["Typical recruiter", "HireGladd"],
+    rows: [
+      { label: "How you pay", them: "A share of each new hire's yearly pay", us: "One flat monthly fee" },
+      { label: "Hiring several people", them: "A new fee for every hire", us: "Same flat fee" },
+      { label: "Someone quits early", them: "Often your problem", us: "We replace them, free" },
+      { label: "Office help", them: "Not part of the deal", us: "Available when you need it" },
     ],
   },
   office: {
     id: "office-support",
     icon: "inbox",
-    eyebrow: "Office support",
     heading: "Need help in the office too?",
     body: "We can also work as your office team, inside your own phone, email and business software.",
     points: [
@@ -110,25 +203,11 @@ export const home = {
       "Book appointments and return calls",
       "Chase unpaid invoices so you get paid",
     ],
-  },
-  compare: {
-    eyebrow: "Why HireGladd",
-    heading: "One flat fee. Not a cut of every hire.",
-    body: "Recruiters often charge 10–20% of a new hire's yearly salary, for every person they place. We charge one flat monthly fee.",
-    columns: ["Typical recruiter", "HireGladd"],
-    rows: [
-      { label: "How you pay", them: "10–20% of each hire's yearly salary", us: "One flat monthly fee" },
-      { label: "Hiring several people", them: "A new fee for every hire", us: "Same flat fee" },
-      { label: "Office help", them: "Not part of the deal", us: "Available when you need it" },
-    ],
+    button: "Ask about office support",
   },
   why: {
+    label: "Why HireGladd",
     items: [
-      {
-        icon: "shield",
-        title: "We never charge job seekers.",
-        body: "Candidates never pay us anything, so good people are glad to work with us.",
-      },
       {
         icon: "chat",
         title: "English and Spanish.",
@@ -136,53 +215,47 @@ export const home = {
       },
       {
         icon: "tools",
-        title: "We work in the tools you already use.",
-        body: "Your phone number, your email and your software. Nothing changes for your customers.",
+        title: "Nothing new to learn.",
+        body: "We work with your phone, your email and the tools you already use.",
+      },
+      {
+        icon: "check",
+        title: "You stay in charge.",
+        body: "Every hiring decision is yours. We make sure the right people get to your door.",
       },
     ],
   },
-  industries: {
-    eyebrow: "Industries",
-    heading: "Industries we know well",
-    body: "We work with all kinds of owner-run businesses. These are the ones we know best.",
-    allLink: "See all industries",
-  },
-  proof: {
-    heading: "What owners say",
-    /**
-     * Add REAL quotes or results only, with the client's permission.
-     * Example: { quote: "…", name: "Jane Doe", company: "Doe Roofing", industry: "Roofing" }
-     * While this list is empty, the section is hidden on the live site.
-     */
-    items: [] as { quote: string; name: string; company: string; industry?: string }[],
-    placeholderNote:
-      "Proof section. Add a real client quote with their name, company and permission, or a real result such as roles filled or invoices collected. This section stays hidden on the live site until you fill it in (content/en/site.ts → home.proof.items).",
-  },
   faq: {
-    eyebrow: "FAQ",
     heading: "Questions owners ask",
-    aside: "Don't see your question? Ask us on a short call.",
     items: [
       {
         q: "What kind of businesses do you work with?",
-        a: "Owner-run businesses, usually with about 8 to 30 people, that are always hiring and short on office help. We know trade and service companies especially well: roofing, HVAC, plumbing, electrical and commercial cleaning.",
+        a: "Owner-run businesses that hire often, mostly cleaning, roofing and HVAC, plumbing and electrical companies.",
       },
       {
         q: "How much does it cost?",
-        a: "One flat monthly fee, based on what you need. We'll give you the number on our first call. There are no per-hire commissions.",
+        a: "One flat monthly fee, based on how many people you need. We'll give you the price on a short call. No per-hire fees.",
       },
-      { q: "Do job seekers pay anything?", a: "No, never." },
       {
         q: "What roles do you hire for?",
-        a: "Field and frontline roles like technicians, installers, crew members and cleaners, and office roles like receptionists, customer service reps, dispatchers and estimators.",
+        a: "Field roles like technicians, crew members and cleaners, and office roles like dispatchers, receptionists and estimators.",
       },
       {
+        q: "What if someone quits early?",
+        a: "If they leave in their first 30 days, we find a replacement at no extra cost.",
+      },
+      {
+        q: "Who runs background checks?",
+        a: "You do, the same way you do now. You make every hiring decision.",
+      },
+      { q: "Do job seekers pay anything?", a: "No. Never." },
+      {
         q: "Can you hire Spanish-speaking candidates?",
-        a: "Yes. We work in English and Spanish, with candidates and with your customers.",
+        a: "Yes. We talk with candidates in English and Spanish.",
       },
       {
         q: "Can you help with office work too?",
-        a: "Yes. We can also work as your office team, inside the phone, email and software you already use: following up on quotes, booking appointments and chasing unpaid invoices.",
+        a: "Yes. We can follow up on quotes, book appointments and chase unpaid invoices, using your own phone and email.",
       },
     ],
   },
