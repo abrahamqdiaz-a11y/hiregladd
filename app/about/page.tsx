@@ -17,7 +17,7 @@ export default function AboutPage() {
 
   return (
     <>
-      <PageHero title={about.heading} intro={about.intro} />
+      <PageHero eyebrow="About us" title={about.heading} intro={about.intro} />
 
       <Section labelledBy="about-body">
         <h2 id="about-body" className="sr-only">About us</h2>

@@ -22,7 +22,7 @@ export const site = {
   ],
   ctaLabel: "Book a call",
   footer: {
-    tagline: "Hiring for trade and service companies, with office support when you need it.",
+    tagline: "Hiring for growing businesses, with office support when you need it.",
     parent: "An EchelonFox company",
     privacy: "Privacy policy",
   },
@@ -30,17 +30,32 @@ export const site = {
 
 export const home = {
   seo: {
-    title: "Gladd | Hiring for trade and service companies",
+    title: "HireGladd | Hiring and office support for growing businesses",
     description:
-      "We find, screen and line up techs, installers, crews and office staff for roofing, HVAC, plumbing, electrical and cleaning companies. One flat monthly fee.",
+      "We find, screen and line up the field and office staff your business needs, for one flat monthly fee. No per-hire commissions. English and Spanish.",
   },
   hero: {
-    eyebrow: "Hiring for trade and service companies",
-    headline: "We find your crew. You run the jobs.",
+    eyebrow: "Hiring and office support for growing businesses",
+    headline: "We find your people.",
+    headlineAccent: "You run your business.",
     subhead:
-      "Gladd finds, screens and lines up the techs, installers, crews and office staff you need, for one flat monthly fee. No per-hire commissions. We can run your office too.",
+      "HireGladd finds, screens and lines up the field and office staff you need, for one flat monthly fee. No per-hire commissions. We can run your office too.",
+    secondaryCta: "See the roles we fill",
+    points: ["One flat monthly fee", "No per-hire commissions", "English and Spanish"],
+    /** Illustration only: shows what working with us looks like. Not real client data. */
+    board: {
+      title: "Your open roles",
+      tag: "Example",
+      rows: [
+        { role: "Field technician", status: "Interview set", icon: "calendar" },
+        { role: "Customer service rep", status: "Shortlist ready", icon: "users" },
+        { role: "Crew lead", status: "Screening", icon: "hardhat" },
+        { role: "Office coordinator", status: "Paperwork done", icon: "clipboard" },
+      ],
+    },
   },
   problem: {
+    eyebrow: "The problem",
     heading: "Sound familiar?",
     items: [
       {
@@ -51,57 +66,64 @@ export const home = {
       {
         icon: "phone",
         title: "There's no time to sort through people.",
-        body: "Applications pile up while you're on the job, and the good ones take another offer before you call back.",
+        body: "Applications pile up while you're busy running the business, and the good ones take another offer before you call back.",
       },
       {
         icon: "moon",
-        title: "New-hire paperwork waits until night.",
-        body: "Forms, documents and first-day details all get done at the kitchen table after a full day.",
+        title: "The paperwork waits until night.",
+        body: "New-hire forms, follow-ups and invoices all get done at the kitchen table after a full day.",
       },
     ],
-    closer: "You didn't start a company to spend your nights hiring. We take it off your plate.",
+    closer: "You started a business, not an HR department. We take hiring off your plate.",
   },
   hiring: {
     id: "hiring",
+    eyebrow: "Hiring",
     heading: "We fill your open roles",
     body: "We find, screen and line up candidates, so you only meet the ones worth your time. Then we handle the new-hire paperwork before day one.",
     groups: [
       {
         icon: "hardhat",
-        title: "In the field",
-        points: ["Service techs and installers", "Crew members and crew leads", "Helpers and apprentices", "Cleaners and floor techs"],
+        title: "Field and frontline",
+        points: ["Technicians and installers", "Crew members and crew leads", "Cleaners and janitorial staff", "Helpers and trainees"],
       },
       {
         icon: "users",
-        title: "In the office",
-        points: ["Dispatchers", "Customer service reps", "Estimators", "Office coordinators"],
+        title: "Office",
+        points: ["Receptionists and customer service reps", "Dispatchers and schedulers", "Admin assistants and coordinators", "Estimators"],
       },
     ],
     results: [
-      "Screened candidates, not a stack of applications",
-      "Interviews set up on your schedule",
-      "New-hire paperwork done before day one",
+      { icon: "check", text: "Screened candidates, not a stack of applications" },
+      { icon: "calendar", text: "Interviews set up on your schedule" },
+      { icon: "clipboard", text: "New-hire paperwork done before day one" },
     ],
   },
   office: {
     id: "office-support",
     icon: "inbox",
+    eyebrow: "Office support",
     heading: "Need help in the office too?",
-    body: "We can also work as your office team, inside your own phone, email and job software.",
+    body: "We can also work as your office team, inside your own phone, email and business software.",
     points: [
-      "Follow up on estimates so they turn into jobs",
+      "Follow up on quotes and estimates so they turn into work",
       "Book appointments and return calls",
       "Chase unpaid invoices so you get paid",
     ],
   },
+  compare: {
+    eyebrow: "Why HireGladd",
+    heading: "One flat fee. Not a cut of every hire.",
+    body: "Recruiters often charge 10–20% of a new hire's yearly salary, for every person they place. We charge one flat monthly fee.",
+    columns: ["Typical recruiter", "HireGladd"],
+    rows: [
+      { label: "How you pay", them: "10–20% of each hire's yearly salary", us: "One flat monthly fee" },
+      { label: "Hiring several people", them: "A new fee for every hire", us: "Same flat fee" },
+      { label: "Office help", them: "Not part of the deal", us: "Available when you need it" },
+    ],
+  },
   why: {
-    heading: "Why Gladd",
     items: [
-      {
-        icon: "tag",
-        title: "One flat fee, not commissions.",
-        body: "Recruiters often charge 10–20% of a new hire's yearly salary. We charge one flat monthly fee, however many roles we fill.",
-      },
       {
         icon: "shield",
         title: "We never charge job seekers.",
@@ -115,12 +137,14 @@ export const home = {
       {
         icon: "tools",
         title: "We work in the tools you already use.",
-        body: "Your phone number, your email and your job software. Nothing changes for your customers.",
+        body: "Your phone number, your email and your software. Nothing changes for your customers.",
       },
     ],
   },
   industries: {
-    heading: "Built for trade and service companies",
+    eyebrow: "Industries",
+    heading: "Industries we know well",
+    body: "We work with all kinds of owner-run businesses. These are the ones we know best.",
     allLink: "See all industries",
   },
   proof: {
@@ -135,11 +159,13 @@ export const home = {
       "Proof section. Add a real client quote with their name, company and permission, or a real result such as roles filled or invoices collected. This section stays hidden on the live site until you fill it in (content/en/site.ts → home.proof.items).",
   },
   faq: {
+    eyebrow: "FAQ",
     heading: "Questions owners ask",
+    aside: "Don't see your question? Ask us on a short call.",
     items: [
       {
-        q: "What kind of companies do you work with?",
-        a: "Owner-run trade and service companies, usually with 8 to 30 people: roofing, HVAC, plumbing, electrical and commercial cleaning.",
+        q: "What kind of businesses do you work with?",
+        a: "Owner-run businesses, usually with about 8 to 30 people, that are always hiring and short on office help. We know trade and service companies especially well: roofing, HVAC, plumbing, electrical and commercial cleaning.",
       },
       {
         q: "How much does it cost?",
@@ -148,7 +174,7 @@ export const home = {
       { q: "Do job seekers pay anything?", a: "No, never." },
       {
         q: "What roles do you hire for?",
-        a: "Field roles like techs, installers, crew members and cleaners, and office roles like dispatchers, customer service reps and estimators.",
+        a: "Field and frontline roles like technicians, installers, crew members and cleaners, and office roles like receptionists, customer service reps, dispatchers and estimators.",
       },
       {
         q: "Can you hire Spanish-speaking candidates?",
@@ -156,7 +182,7 @@ export const home = {
       },
       {
         q: "Can you help with office work too?",
-        a: "Yes. We can also work as your office team, inside the phone, email and job software you already use: following up on estimates, booking appointments and chasing unpaid invoices.",
+        a: "Yes. We can also work as your office team, inside the phone, email and software you already use: following up on quotes, booking appointments and chasing unpaid invoices.",
       },
     ],
   },
@@ -168,7 +194,8 @@ export const home = {
 
 /** Shared "How it works" section, used on the homepage and every industry page. */
 export const howItWorks = {
-  heading: "How it works",
+  eyebrow: "How it works",
+  heading: "Three simple steps",
   steps: [
     {
       title: "A short call.",
@@ -189,7 +216,7 @@ export const industriesIndex = {
   seo: {
     title: "Industries we serve",
     description:
-      "Gladd hires techs, crews and office staff for roofing, HVAC, plumbing, electrical and commercial cleaning companies with about 8 to 30 people.",
+      "HireGladd hires techs, crews and office staff for roofing, HVAC, plumbing, electrical and commercial cleaning companies with about 8 to 30 people.",
   },
   heading: "Industries we serve",
   intro:
@@ -203,19 +230,19 @@ export const industriesIndex = {
 
 export const about = {
   seo: {
-    title: "About Gladd",
+    title: "About HireGladd",
     description:
-      "Gladd is a hiring and office-support firm for owner-run trade and service companies. One flat monthly fee, English and Spanish. An EchelonFox company.",
+      "HireGladd is a hiring and office-support firm for owner-run businesses. One flat monthly fee, English and Spanish. An EchelonFox company.",
   },
-  heading: "About Gladd",
+  heading: "About HireGladd",
   intro:
-    "Gladd is a hiring firm for trade and service companies. We find the people our clients need, and when they want it, we work as their office team too, so the owner can stay on the jobs.",
+    "HireGladd is a hiring firm for owner-run businesses, and we know trade and service companies especially well. We find the people our clients need, and when they want it, we work as their office team too, so the owner can stay on the jobs.",
   sections: [
     {
       heading: "Why we exist",
       body: [
         "Owners of roofing, HVAC, plumbing, electrical and cleaning companies are some of the hardest-working people we know. Most of them are on job sites all day, short on people, and doing office work at night.",
-        "Big companies have a hiring team and an office staff. A company with 15 people usually has the owner. We built Gladd to be that team for them.",
+        "Big companies have a hiring team and an office staff. A company with 15 people usually has the owner. We built HireGladd to be that team for them.",
       ],
     },
     {
@@ -227,15 +254,15 @@ export const about = {
     },
     {
       heading: "Part of EchelonFox",
-      body: ["Gladd is an EchelonFox company."],
+      body: ["HireGladd is an EchelonFox company."],
     },
   ],
   founder: {
-    heading: "Who's behind Gladd",
+    heading: "Who's behind HireGladd",
     /** Replace with your real bio. While it's a placeholder, it's hidden on the live site. */
     name: "[YOUR NAME]",
     role: "[YOUR TITLE]",
-    bio: "[YOUR BIO: a few sentences on who you are, your background, and why you started Gladd.]",
+    bio: "[YOUR BIO: a few sentences on who you are, your background, and why you started HireGladd.]",
   },
 };
 
@@ -243,7 +270,7 @@ export const contact = {
   seo: {
     title: "Book a call",
     description:
-      "Book a short call with Gladd. Tell us who you need to hire and what office work you'd hand off first. We'll tell you plainly how we'd handle it.",
+      "Book a short call with HireGladd. Tell us who you need to hire and what office work you'd hand off first. We'll tell you plainly how we'd handle it.",
   },
   heading: "Book a call",
   intro:
@@ -278,7 +305,7 @@ export const contact = {
 export const thankYou = {
   seo: {
     title: "Thanks, we got it",
-    description: "Thanks for reaching out to Gladd.",
+    description: "Thanks for reaching out to HireGladd.",
   },
   heading: "Thanks. We got your message.",
   body: "We'll get back to you soon to set up a short call.",

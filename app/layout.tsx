@@ -8,7 +8,7 @@ import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: "Gladd", template: "%s | Gladd" },
+  title: { default: "HireGladd", template: "%s | HireGladd" },
   formatDetection: { telephone: false },
 };
 

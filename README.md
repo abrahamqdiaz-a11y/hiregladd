@@ -1,6 +1,6 @@
-# Gladd — hiregladd.com
+# HireGladd — hiregladd.com
 
-Marketing site for Gladd, built with Next.js (App Router) + Tailwind CSS, exported as static HTML and hosted on Netlify.
+Marketing site for HireGladd, built with Next.js (App Router) + Tailwind CSS, exported as static HTML and hosted on Netlify.
 
 ## Run it
 

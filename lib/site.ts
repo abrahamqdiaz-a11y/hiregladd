@@ -1,5 +1,5 @@
 export const SITE_URL = "https://hiregladd.com";
-export const SITE_NAME = "Gladd";
+export const SITE_NAME = "HireGladd";
 export const PARENT_COMPANY = "EchelonFox";
 
 /** True in local builds and Netlify deploy previews; false on the live site. */

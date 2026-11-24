@@ -14,7 +14,7 @@ const LAST_UPDATED = "November 24, 2026";
 
 export const metadata = pageMetadata({
   title: "Privacy policy",
-  description: "How Gladd collects, uses and protects the information you send us through our contact form.",
+  description: "How HireGladd collects, uses and protects the information you send us through our contact form.",
   path: "/privacy/",
 });
 
@@ -39,7 +39,7 @@ export default function PrivacyPage() {
           <div>
             <h2>Who we are</h2>
             <p>
-              Gladd (&ldquo;we&rdquo;, &ldquo;us&rdquo;) runs hiregladd.com. Gladd is an EchelonFox company. This policy
+              HireGladd (&ldquo;we&rdquo;, &ldquo;us&rdquo;) runs hiregladd.com. HireGladd is an EchelonFox company. This policy
               explains what we do with the information you send us through this website.
             </p>
           </div>

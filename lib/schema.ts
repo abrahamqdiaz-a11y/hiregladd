@@ -12,7 +12,7 @@ export function organizationSchema() {
     url: SITE_URL,
     logo: absoluteUrl("/icon.png"),
     description:
-      "Hiring, plus office support, for owner-run trade and service companies: roofing, HVAC, plumbing, electrical and commercial cleaning.",
+      "Hiring, plus office support, for owner-run businesses, especially trade and service companies.",
     knowsLanguage: ["en", "es"],
     parentOrganization: { "@type": "Organization", name: PARENT_COMPANY },
   };
@@ -34,16 +34,16 @@ function service(name: string, description: string, audience: string, path: stri
 }
 
 export function homeServicesSchema() {
-  const audience = "Owner-run trade and service companies";
+  const audience = "Owner-run businesses";
   return [
     service(
-      "Hiring for trade and service companies",
+      "Hiring for growing businesses",
       "We find, screen and line up candidates for field and office roles, and handle new-hire paperwork. One flat monthly fee, no per-hire commissions.",
       audience,
       "/#hiring",
     ),
     service(
-      "Office support for trade and service companies",
+      "Office support for growing businesses",
       "We work inside your phone, email and job software as your office team: following up on estimates, booking appointments and chasing unpaid invoices.",
       audience,
       "/#office-support",
