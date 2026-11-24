@@ -16,13 +16,13 @@ export const site = {
 
   nav: [
     { label: "Hiring", href: "/#hiring" },
-    { label: "Office support", href: "/#office-support" },
+    { label: "How it works", href: "/#how-it-works" },
     { label: "Industries", href: "/industries/" },
     { label: "About", href: "/about/" },
   ],
   ctaLabel: "Book a call",
   footer: {
-    tagline: "Hiring and office support for trade and service companies.",
+    tagline: "Hiring for trade and service companies, with office support when you need it.",
     parent: "An EchelonFox company",
     privacy: "Privacy policy",
   },
@@ -30,15 +30,15 @@ export const site = {
 
 export const home = {
   seo: {
-    title: "Gladd | Hiring and office support for trade companies",
+    title: "Gladd | Hiring for trade and service companies",
     description:
-      "We hire your crew and run your office for one flat monthly fee. For roofing, HVAC, plumbing, electrical and commercial cleaning companies. English and Spanish.",
+      "We find, screen and line up techs, installers, crews and office staff for roofing, HVAC, plumbing, electrical and cleaning companies. One flat monthly fee.",
   },
   hero: {
-    eyebrow: "Hiring and office support for trade and service companies",
-    headline: "We hire your crew and run your office. You run the jobs.",
+    eyebrow: "Hiring for trade and service companies",
+    headline: "We find your crew. You run the jobs.",
     subhead:
-      "Gladd finds the people you need and handles your calls, estimates and invoices, all for one flat monthly fee. For roofing, HVAC, plumbing, electrical and commercial cleaning companies.",
+      "Gladd finds, screens and lines up the techs, installers, crews and office staff you need, for one flat monthly fee. No per-hire commissions. We can run your office too.",
   },
   problem: {
     heading: "Sound familiar?",
@@ -46,45 +46,53 @@ export const home = {
       {
         icon: "users",
         title: "You're always hiring.",
-        body: "Someone quits, someone doesn't show, and you're back to posting ads and sorting through applications.",
+        body: "Someone quits, someone doesn't show, and you're back to posting ads again.",
       },
       {
         icon: "phone",
-        title: "The phone rings while you're on a roof.",
-        body: "You miss the call, and the job goes to whoever picked up.",
+        title: "There's no time to sort through people.",
+        body: "Applications pile up while you're on the job, and the good ones take another offer before you call back.",
       },
       {
         icon: "moon",
-        title: "The paperwork waits until night.",
-        body: "Estimates, invoices and new-hire forms all get done at the kitchen table after a full day.",
+        title: "New-hire paperwork waits until night.",
+        body: "Forms, documents and first-day details all get done at the kitchen table after a full day.",
       },
     ],
-    closer: "You didn't start a company to do all of that yourself. We take it off your plate.",
+    closer: "You didn't start a company to spend your nights hiring. We take it off your plate.",
   },
-  offers: {
-    heading: "Two ways we help",
-    hiring: {
-      id: "hiring",
-      icon: "hardhat",
-      title: "Hiring",
-      body: "We find, screen and line up candidates, so you only meet the ones worth your time.",
-      points: [
-        "Field roles: techs, installers, crew members, cleaners",
-        "Office roles: dispatchers, customer service reps, estimators",
-        "New-hire paperwork, done before day one",
-      ],
-    },
-    office: {
-      id: "office-support",
-      icon: "inbox",
-      title: "Office support",
-      body: "We work as your office team, inside your own phone, email and job software.",
-      points: [
-        "We follow up on estimates so they turn into jobs",
-        "We book appointments and return calls",
-        "We chase unpaid invoices so you get paid",
-      ],
-    },
+  hiring: {
+    id: "hiring",
+    heading: "We fill your open roles",
+    body: "We find, screen and line up candidates, so you only meet the ones worth your time. Then we handle the new-hire paperwork before day one.",
+    groups: [
+      {
+        icon: "hardhat",
+        title: "In the field",
+        points: ["Service techs and installers", "Crew members and crew leads", "Helpers and apprentices", "Cleaners and floor techs"],
+      },
+      {
+        icon: "users",
+        title: "In the office",
+        points: ["Dispatchers", "Customer service reps", "Estimators", "Office coordinators"],
+      },
+    ],
+    results: [
+      "Screened candidates, not a stack of applications",
+      "Interviews set up on your schedule",
+      "New-hire paperwork done before day one",
+    ],
+  },
+  office: {
+    id: "office-support",
+    icon: "inbox",
+    heading: "Need help in the office too?",
+    body: "We can also work as your office team, inside your own phone, email and job software.",
+    points: [
+      "Follow up on estimates so they turn into jobs",
+      "Book appointments and return calls",
+      "Chase unpaid invoices so you get paid",
+    ],
   },
   why: {
     heading: "Why Gladd",
@@ -124,7 +132,7 @@ export const home = {
      */
     items: [] as { quote: string; name: string; company: string; industry?: string }[],
     placeholderNote:
-      "PLACEHOLDER: proof section. Add a real client quote with their name, company and permission, or a real result such as roles filled or invoices collected. This section stays hidden on the live site until you fill it in (content/en/site.ts → home.proof.items).",
+      "Proof section. Add a real client quote with their name, company and permission, or a real result such as roles filled or invoices collected. This section stays hidden on the live site until you fill it in (content/en/site.ts → home.proof.items).",
   },
   faq: {
     heading: "Questions owners ask",
@@ -139,22 +147,22 @@ export const home = {
       },
       { q: "Do job seekers pay anything?", a: "No, never." },
       {
-        q: "Do I have to switch software?",
-        a: "No. We work inside the phone, email and job software you already use.",
+        q: "What roles do you hire for?",
+        a: "Field roles like techs, installers, crew members and cleaners, and office roles like dispatchers, customer service reps and estimators.",
       },
       {
-        q: "Can you work with Spanish-speaking candidates and customers?",
-        a: "Yes. We work in English and Spanish.",
+        q: "Can you hire Spanish-speaking candidates?",
+        a: "Yes. We work in English and Spanish, with candidates and with your customers.",
       },
       {
-        q: "Do you only do hiring, or only office work?",
-        a: "We do both. Many owners start with whichever one hurts most right now.",
+        q: "Can you help with office work too?",
+        a: "Yes. We can also work as your office team, inside the phone, email and job software you already use: following up on estimates, booking appointments and chasing unpaid invoices.",
       },
     ],
   },
   finalCta: {
-    heading: "Get your evenings back.",
-    body: "Book a short call. Tell us what you'd hand off first, and we'll tell you plainly how we'd handle it.",
+    heading: "Stop spending your nights hiring.",
+    body: "Book a short call. Tell us which roles you need to fill, and we'll tell you plainly how we'd fill them.",
   },
 };
 
@@ -164,11 +172,11 @@ export const howItWorks = {
   steps: [
     {
       title: "A short call.",
-      body: "Tell us who you need and what's piling up.",
+      body: "Tell us which roles you need to fill, and anything else that's piling up.",
     },
     {
-      title: "We set up inside your tools.",
-      body: "We use your phone, email and job software. You don't need to learn anything new.",
+      title: "We line up candidates.",
+      body: "You meet only the people worth your time. We work in your own tools, so there's nothing new to learn.",
     },
     {
       title: "One flat monthly fee.",
@@ -181,11 +189,11 @@ export const industriesIndex = {
   seo: {
     title: "Industries we serve",
     description:
-      "Gladd hires crews and runs the office for roofing, HVAC, plumbing, electrical and commercial cleaning companies with about 8 to 30 people.",
+      "Gladd hires techs, crews and office staff for roofing, HVAC, plumbing, electrical and commercial cleaning companies with about 8 to 30 people.",
   },
   heading: "Industries we serve",
   intro:
-    "We work with owner-run trade and service companies, usually with 8 to 30 people. Pick your trade to see the roles we fill and the office work we take over.",
+    "We hire for owner-run trade and service companies, usually with 8 to 30 people. Pick your trade to see the roles we fill.",
   cardLink: "See how we help",
   notListed: {
     heading: "Don't see your trade?",
@@ -201,7 +209,7 @@ export const about = {
   },
   heading: "About Gladd",
   intro:
-    "Gladd is a hiring and office-support firm for trade and service companies. We find the people our clients need, and we work as their office team so the owner can stay on the jobs.",
+    "Gladd is a hiring firm for trade and service companies. We find the people our clients need, and when they want it, we work as their office team too, so the owner can stay on the jobs.",
   sections: [
     {
       heading: "Why we exist",
@@ -244,7 +252,7 @@ export const contact = {
   bookingBody: "Use our calendar to book a call directly.",
   bookingButton: "Open our calendar",
   bookingPlaceholderNote:
-    "PLACEHOLDER: calendar booking link. Add your link in content/en/site.ts → site.bookingUrl. Hidden on the live site until filled.",
+    "Calendar booking link. Add your link in content/en/site.ts → site.bookingUrl. Hidden on the live site until filled.",
   form: {
     name: "Your name",
     company: "Company name",
@@ -257,7 +265,7 @@ export const contact = {
     phone: "Phone",
     email: "Email",
     handoff: "What's the one thing you'd hand off first?",
-    handoffHint: "For example: hiring two techs, returning calls, chasing invoices.",
+    handoffHint: "For example: hiring two techs, finding a dispatcher, or returning calls.",
     required: "Required",
     submit: "Send",
     sending: "Sending…",

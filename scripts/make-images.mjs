@@ -10,8 +10,8 @@ const og = `<html><head><style>html,body{margin:0;height:100%}</style></head><bo
   <div style="width:24px;background:#5b21b6"></div>
   <div style="padding:80px 90px;display:flex;flex-direction:column;justify-content:space-between;flex:1;background:linear-gradient(#f5f3ff,#fff)">
     <div style="font-size:56px;font-weight:800;color:#111827;letter-spacing:-1px">Gladd<span style="color:#5b21b6">.</span></div>
-    <div style="font-size:68px;line-height:1.1;font-weight:800;color:#111827;letter-spacing:-1.5px;max-width:960px">We hire your crew and run your office. <span style="color:#5b21b6">You run the jobs.</span></div>
-    <div style="font-size:30px;color:#4b5563">Hiring and office support for trade and service companies</div>
+    <div style="font-size:68px;line-height:1.1;font-weight:800;color:#111827;letter-spacing:-1.5px;max-width:960px">We find your crew. <span style="color:#5b21b6">You run the jobs.</span></div>
+    <div style="font-size:30px;color:#4b5563">Hiring for trade and service companies</div>
   </div></body></html>`;
 
 const icon = `<html><head><style>html,body{margin:0;height:100%}</style></head><body style="background:#5b21b6;display:flex;align-items:center;justify-content:center;font-family:${font}">

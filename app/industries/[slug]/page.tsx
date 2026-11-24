@@ -101,33 +101,40 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
           <RoleList title="In the field" roles={industry.roles.field} />
           <RoleList title="In the office" roles={industry.roles.office} />
         </div>
-      </Section>
-
-      {/* Office tasks */}
-      <Section labelledBy="tasks-heading" id="office-support">
-        <div className="flex items-start gap-4">
-          <IconBadge name="inbox" />
-          <div>
-            <H2 id="tasks-heading">Office work we take over</H2>
-            <p className="mt-3 max-w-2xl text-lg text-muted">
-              We work inside your own phone, email and job software, as your office team.
-            </p>
-          </div>
+        <div className="mt-10">
+          <ButtonLink href="/contact/">{site.ctaLabel}</ButtonLink>
         </div>
-        <ul className="mt-10 grid gap-x-10 gap-y-8 md:grid-cols-2">
-          {industry.officeTasks.map((t) => (
-            <li key={t.title} className="flex gap-4">
-              <Icon name="check" className="mt-1 h-6 w-6 flex-none text-accent" />
-              <span>
-                <strong className="block text-lg font-bold">{t.title}</strong>
-                <span className="text-muted">{t.detail}</span>
-              </span>
-            </li>
-          ))}
-        </ul>
       </Section>
 
-      <HowItWorks />
+      <HowItWorks tone="white" showButton={false} />
+
+      {/* Office support: smaller, second offer */}
+      <section id="office-support" aria-labelledby="tasks-heading" className="bg-paper pb-16 sm:pb-24">
+        <Container>
+          <div className="rounded-xl border-2 border-accent-line bg-accent-soft p-6 sm:p-10">
+            <div className="flex items-start gap-4">
+              <IconBadge name="inbox" />
+              <div>
+                <h2 id="tasks-heading" className="text-2xl font-bold sm:text-3xl">Need help in the office too?</h2>
+                <p className="mt-2 text-lg text-muted">
+                  We can also work as your office team, inside your own phone, email and job software.
+                </p>
+              </div>
+            </div>
+            <ul className="mt-8 grid gap-x-10 gap-y-5 md:grid-cols-2">
+              {industry.officeTasks.map((t) => (
+                <li key={t.title} className="flex gap-3">
+                  <Icon name="check" className="mt-1 h-5 w-5 flex-none text-accent" />
+                  <span>
+                    <strong className="block font-semibold">{t.title}</strong>
+                    <span className="text-base text-muted">{t.detail}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Container>
+      </section>
 
       <FaqList heading={`${industry.name}: common questions`} items={industry.faqs} />
       <CtaBand heading={industry.cta.heading} body={industry.cta.body} />

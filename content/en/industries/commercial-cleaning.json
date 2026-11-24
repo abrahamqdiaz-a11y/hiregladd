@@ -3,33 +3,66 @@
   "order": 3,
   "name": "Commercial Cleaning",
   "icon": "sparkle",
-  "summary": "Night-shift cleaners hired, and bids, client requests and late payments handled.",
+  "summary": "Night-shift cleaners, floor techs and supervisors hired, so you stop covering shifts yourself.",
   "seo": {
-    "title": "Hiring and office support for commercial cleaning companies",
-    "description": "We hire cleaners, floor techs and supervisors for night and weekend shifts, and we follow up on bids, answer client requests and collect late payments."
+    "title": "Hiring for commercial cleaning companies",
+    "description": "We find, screen and line up cleaners, floor techs and site supervisors for night and weekend shifts. One flat monthly fee, English and Spanish."
   },
   "hero": {
-    "headline": "Every shift covered. Every client answered.",
-    "subhead": "We hire cleaners and supervisors for the shifts you can't keep filled, and we handle the bids, client requests and late payments that eat up your day."
+    "headline": "Every shift covered by people who show up.",
+    "subhead": "We find, screen and line up cleaners, floor techs and supervisors for the shifts you can't keep filled, in English and Spanish."
   },
   "roles": {
     "field": [
-      { "title": "Cleaners and janitorial staff", "note": "For night, early-morning and weekend shifts." },
-      { "title": "Floor techs", "note": "Strip and wax, carpet cleaning and other floor care." },
-      { "title": "Team leads and site supervisors", "note": "People who can run a building without you." },
-      { "title": "Day porters", "note": "For clients who need someone on site during the day." }
+      {
+        "title": "Cleaners and janitorial staff",
+        "note": "For night, early-morning and weekend shifts."
+      },
+      {
+        "title": "Floor techs",
+        "note": "Strip and wax, carpet cleaning and other floor care."
+      },
+      {
+        "title": "Team leads and site supervisors",
+        "note": "People who can run a building without you."
+      },
+      {
+        "title": "Day porters",
+        "note": "For clients who need someone on site during the day."
+      }
     ],
     "office": [
-      { "title": "Account and client service reps", "note": "The person your building managers call." },
-      { "title": "Schedulers", "note": "Matching cleaners to buildings and covering call-outs." },
-      { "title": "Estimators", "note": "Walking buildings and putting together bids." }
+      {
+        "title": "Account and client service reps",
+        "note": "The person your building managers call."
+      },
+      {
+        "title": "Schedulers",
+        "note": "Matching cleaners to buildings and covering call-outs."
+      },
+      {
+        "title": "Estimators",
+        "note": "Walking buildings and putting together bids."
+      }
     ]
   },
   "officeTasks": [
-    { "title": "Follow up on bids and proposals", "detail": "We check in with property managers and facility contacts until you get a yes or a no." },
-    { "title": "Book walkthroughs", "detail": "We set up site visits for new bids and put them on your calendar." },
-    { "title": "Answer client requests and complaints", "detail": "We reply quickly, log what's needed and make sure it gets to the right person." },
-    { "title": "Collect late payments", "detail": "We follow up with clients who pay late, so you're not floating payroll." }
+    {
+      "title": "Follow up on bids and proposals",
+      "detail": "We check in with property managers and facility contacts until you get a yes or a no."
+    },
+    {
+      "title": "Book walkthroughs",
+      "detail": "We set up site visits for new bids and put them on your calendar."
+    },
+    {
+      "title": "Answer client requests and complaints",
+      "detail": "We reply quickly, log what's needed and make sure it gets to the right person."
+    },
+    {
+      "title": "Collect late payments",
+      "detail": "We follow up with clients who pay late, so you're not floating payroll."
+    }
   ],
   "pains": [
     "Somebody doesn't show for the night shift, and I'm the one mopping at 2 a.m.",
@@ -37,13 +70,25 @@
     "My clients pay whenever they feel like it, and I don't have time to chase them."
   ],
   "faqs": [
-    { "q": "Can you hire for night and weekend shifts?", "a": "Yes. Most of the cleaning roles we fill are evenings, overnights and weekends, and we screen candidates for the schedule you need." },
-    { "q": "Many of our cleaners speak Spanish. Is that a problem?", "a": "No. We work in English and Spanish, with candidates and with your team." },
-    { "q": "Can you help us win new contracts?", "a": "We book walkthroughs and follow up on the bids you send, so fewer of them go unanswered. You still set your prices." },
-    { "q": "How quickly can you fill an open spot?", "a": "It depends on the role, the shift and your area. We'll tell you plainly on the first call what to expect." }
+    {
+      "q": "Can you hire for night and weekend shifts?",
+      "a": "Yes. Most of the cleaning roles we fill are evenings, overnights and weekends, and we screen candidates for the schedule you need."
+    },
+    {
+      "q": "Many of our cleaners speak Spanish. Is that a problem?",
+      "a": "No. We work in English and Spanish, with candidates and with your team."
+    },
+    {
+      "q": "Can you help us win new contracts?",
+      "a": "We book walkthroughs and follow up on the bids you send, so fewer of them go unanswered. You still set your prices."
+    },
+    {
+      "q": "How quickly can you fill an open spot?",
+      "a": "It depends on the role, the shift and your area. We'll tell you plainly on the first call what to expect."
+    }
   ],
   "cta": {
     "heading": "Stop covering shifts yourself.",
-    "body": "Book a short call. Tell us which shifts you can't keep filled and what's piling up in the office, and we'll tell you how we'd handle it."
+    "body": "Book a short call. Tell us which shifts you can't keep filled, and we'll tell you plainly how we'd fill them."
   }
 }

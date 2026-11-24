@@ -28,7 +28,7 @@ export function pageMetadata({
       url: absoluteUrl(path),
       title: fullTitle,
       description,
-      images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gladd: we hire your crew and run your office." }],
+      images: [{ url: "/og.png", width: 1200, height: 630, alt: "Gladd: we find your crew. You run the jobs." }],
     },
     twitter: {
       card: "summary_large_image",

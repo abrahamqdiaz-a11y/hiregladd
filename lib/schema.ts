@@ -12,7 +12,7 @@ export function organizationSchema() {
     url: SITE_URL,
     logo: absoluteUrl("/icon.png"),
     description:
-      "Hiring and office support for owner-run trade and service companies: roofing, HVAC, plumbing, electrical and commercial cleaning.",
+      "Hiring, plus office support, for owner-run trade and service companies: roofing, HVAC, plumbing, electrical and commercial cleaning.",
     knowsLanguage: ["en", "es"],
     parentOrganization: { "@type": "Organization", name: PARENT_COMPANY },
   };

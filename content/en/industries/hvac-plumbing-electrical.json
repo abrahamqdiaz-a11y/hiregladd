@@ -3,50 +3,104 @@
   "order": 2,
   "name": "HVAC, Plumbing & Electrical",
   "icon": "wrench",
-  "summary": "Licensed techs and helpers hired, and service calls booked before the customer calls someone else.",
+  "summary": "Licensed techs, apprentices and dispatchers hired, so your trucks stay full.",
   "seo": {
-    "title": "Hiring and office support for HVAC, plumbing and electrical companies",
-    "description": "We hire techs, apprentices and dispatchers, and we book service calls, follow up on install quotes and collect unpaid invoices. One flat monthly fee."
+    "title": "Hiring for HVAC, plumbing and electrical companies",
+    "description": "We find, screen and line up HVAC techs, plumbers, electricians, apprentices and dispatchers. One flat monthly fee, no per-hire commissions."
   },
   "hero": {
-    "headline": "More techs on the road. Every service call booked.",
-    "subhead": "We hire the techs, helpers and dispatchers you're short on, and we answer, book and follow up so your trucks stay full."
+    "headline": "Qualified techs on your trucks, without the hiring headache.",
+    "subhead": "We find, screen and line up the techs, apprentices and dispatchers you're short on, so you can keep up with the calls you already have."
   },
   "roles": {
     "field": [
-      { "title": "HVAC service techs and installers", "note": "Residential and light commercial." },
-      { "title": "Service and new-construction plumbers", "note": "From service calls to rough-in." },
-      { "title": "Electricians", "note": "Journeyman and master electricians for service and install work." },
-      { "title": "Apprentices and helpers", "note": "People you can train up into techs." },
-      { "title": "Maintenance techs", "note": "For tune-ups and service-agreement visits." }
+      {
+        "title": "HVAC service techs and installers",
+        "note": "Residential and light commercial."
+      },
+      {
+        "title": "Service and new-construction plumbers",
+        "note": "From service calls to rough-in."
+      },
+      {
+        "title": "Electricians",
+        "note": "Journeyman and master electricians for service and install work."
+      },
+      {
+        "title": "Apprentices and helpers",
+        "note": "People you can train up into techs."
+      },
+      {
+        "title": "Maintenance techs",
+        "note": "For tune-ups and service-agreement visits."
+      }
     ],
     "office": [
-      { "title": "Dispatchers", "note": "Keeping techs routed and customers updated." },
-      { "title": "Customer service reps and call takers", "note": "Answering and booking calls during your busiest weeks." },
-      { "title": "Estimators and comfort advisors", "note": "For replacement and install quotes." }
+      {
+        "title": "Dispatchers",
+        "note": "Keeping techs routed and customers updated."
+      },
+      {
+        "title": "Customer service reps and call takers",
+        "note": "Answering and booking calls during your busiest weeks."
+      },
+      {
+        "title": "Estimators and comfort advisors",
+        "note": "For replacement and install quotes."
+      }
     ]
   },
   "officeTasks": [
-    { "title": "Answer and book service calls", "detail": "We pick up, find out what's wrong and put the job on the schedule." },
-    { "title": "Confirm tomorrow's appointments", "detail": "We call or text customers ahead of time, so fewer techs show up to an empty house." },
-    { "title": "Follow up on replacement and install quotes", "detail": "Big-ticket quotes need a second and third call. We make them." },
-    { "title": "Book maintenance visits", "detail": "We reach out to customers on service agreements and get their tune-ups on the calendar." },
-    { "title": "Chase unpaid invoices", "detail": "We follow up on open balances until they're paid." }
+    {
+      "title": "Answer and book service calls",
+      "detail": "We pick up, find out what's wrong and put the job on the schedule."
+    },
+    {
+      "title": "Confirm tomorrow's appointments",
+      "detail": "We call or text customers ahead of time, so fewer techs show up to an empty house."
+    },
+    {
+      "title": "Follow up on replacement and install quotes",
+      "detail": "Big-ticket quotes need a second and third call. We make them."
+    },
+    {
+      "title": "Book maintenance visits",
+      "detail": "We reach out to customers on service agreements and get their tune-ups on the calendar."
+    },
+    {
+      "title": "Chase unpaid invoices",
+      "detail": "We follow up on open balances until they're paid."
+    }
   ],
   "pains": [
-    "When it's 100 degrees out, every AC in town breaks at once and I can't answer half the calls.",
+    "I've had a tech job posted for months, and nobody qualified applies.",
     "I finally train a good tech, and a bigger shop hires him away.",
-    "I quoted a bunch of system replacements last month and never followed up on any of them."
+    "When it's 100 degrees out, every AC in town breaks at once and I can't answer half the calls."
   ],
   "faqs": [
-    { "q": "Can you find licensed techs?", "a": "Tell us which licenses and certifications each role needs, and we screen candidates for them before you ever talk to them." },
-    { "q": "Do you hire apprentices and helpers too?", "a": "Yes. Many of our clients want people they can train, and we hire for those roles as well as experienced techs." },
-    { "q": "We do HVAC and plumbing. Can you hire for both?", "a": "Yes. We hire across HVAC, plumbing and electrical, so one team can cover all of your trades." },
-    { "q": "Can you book maintenance and service-agreement visits?", "a": "Yes. We contact your agreement customers, book their visits and keep your calendar filled during the slower months." },
-    { "q": "We use our own scheduling software. Do we have to change?", "a": "No. Whatever software you use to schedule and invoice, we work inside it." }
+    {
+      "q": "Can you find licensed techs?",
+      "a": "Tell us which licenses and certifications each role needs, and we screen candidates for them before you ever talk to them."
+    },
+    {
+      "q": "Do you hire apprentices and helpers too?",
+      "a": "Yes. Many of our clients want people they can train, and we hire for those roles as well as experienced techs."
+    },
+    {
+      "q": "We do HVAC and plumbing. Can you hire for both?",
+      "a": "Yes. We hire across HVAC, plumbing and electrical, so one team can cover all of your trades."
+    },
+    {
+      "q": "Can you book maintenance and service-agreement visits?",
+      "a": "Yes. We contact your agreement customers, book their visits and keep your calendar filled during the slower months."
+    },
+    {
+      "q": "We use our own scheduling software. Do we have to change?",
+      "a": "No. Whatever software you use to schedule and invoice, we work inside it."
+    }
   ],
   "cta": {
-    "heading": "Keep your trucks full and your phone answered.",
-    "body": "Book a short call. Tell us which techs you're short on and which calls are slipping, and we'll tell you how we'd handle it."
+    "heading": "Get the techs you need on your trucks.",
+    "body": "Book a short call. Tell us which roles you're short on, and we'll tell you plainly how we'd fill them."
   }
 }

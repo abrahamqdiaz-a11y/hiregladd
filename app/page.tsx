@@ -18,7 +18,7 @@ export const metadata = pageMetadata({
 
 export default function HomePage() {
   const industries = getIndustries();
-  const { hiring, office } = home.offers;
+  const { hiring, office } = home;
 
   return (
     <>
@@ -46,27 +46,49 @@ export default function HomePage() {
         <p className="mt-12 max-w-3xl border-l-4 border-accent pl-5 text-xl font-semibold">{home.problem.closer}</p>
       </Section>
 
-      {/* Two offers */}
-      <Section tone="wash" labelledBy="offers-heading">
-        <H2 id="offers-heading">{home.offers.heading}</H2>
+      {/* Hiring: the main offer */}
+      <Section tone="wash" labelledBy="hiring-heading" id={hiring.id}>
+        <H2 id="hiring-heading">{hiring.heading}</H2>
+        <p className="mt-4 max-w-2xl text-lg text-muted sm:text-xl">{hiring.body}</p>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {[hiring, office].map((offer) => (
-            <article
-              key={offer.id}
-              id={offer.id}
-              aria-labelledby={`${offer.id}-title`}
-              className="rounded-xl border border-line bg-white p-6 sm:p-10"
-            >
-              <IconBadge name={offer.icon} />
-              <h3 id={`${offer.id}-title`} className="mt-5 text-2xl font-bold">{offer.title}</h3>
-              <p className="mt-3 text-lg text-muted">{offer.body}</p>
-              <CheckList items={offer.points} className="mt-6" />
-            </article>
+          {hiring.groups.map((g) => (
+            <div key={g.title} className="rounded-xl border border-line bg-white p-6 sm:p-8">
+              <div className="flex items-center gap-4">
+                <IconBadge name={g.icon} />
+                <h3 className="text-2xl font-bold">{g.title}</h3>
+              </div>
+              <CheckList items={g.points} className="mt-6" />
+            </div>
           ))}
+        </div>
+        <ul className="mt-8 grid gap-4 md:grid-cols-3">
+          {hiring.results.map((r) => (
+            <li key={r} className="flex gap-3 rounded-xl bg-accent px-5 py-4 font-semibold text-white">
+              <Icon name="check" className="mt-0.5 h-5 w-5 flex-none" />
+              {r}
+            </li>
+          ))}
+        </ul>
+        <div className="mt-10">
+          <ButtonLink href="/contact/">{site.ctaLabel}</ButtonLink>
         </div>
       </Section>
 
-      <HowItWorks tone="white" />
+      <HowItWorks tone="white" showButton={false} />
+
+      {/* Office support: the smaller, second offer */}
+      <section id={office.id} aria-labelledby="office-heading" className="bg-paper pb-16 sm:pb-24">
+        <Container>
+          <div className="rounded-xl border-2 border-accent-line bg-accent-soft p-6 sm:p-10 md:flex md:gap-10">
+            <div className="md:w-1/2">
+              <IconBadge name={office.icon} />
+              <h2 id="office-heading" className="mt-4 text-2xl font-bold sm:text-3xl">{office.heading}</h2>
+              <p className="mt-3 text-lg text-muted">{office.body}</p>
+            </div>
+            <CheckList items={office.points} className="mt-6 md:mt-2 md:w-1/2" />
+          </div>
+        </Container>
+      </section>
 
       {/* Why us */}
       <Section tone="wash" labelledBy="why-heading">
