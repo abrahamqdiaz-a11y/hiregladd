@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Forms</title></head>
+<body>
+  <!--
+    Netlify reads this file at deploy time to detect the "contact" form.
+    It is never shown to visitors. Keep the field names in sync with
+    components/ContactForm.tsx.
+  -->
+  <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact">
+    <input name="bot-field">
+    <input name="name" type="text">
+    <input name="company" type="text">
+    <select name="industry"><option value="Other">Other</option></select>
+    <select name="team-size"><option value="8–15 people">8–15 people</option></select>
+    <input name="phone" type="tel">
+    <input name="email" type="email">
+    <textarea name="handoff"></textarea>
+  </form>
+</body>
+</html>

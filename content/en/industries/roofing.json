@@ -1,0 +1,52 @@
+{
+  "slug": "roofing",
+  "order": 1,
+  "name": "Roofing",
+  "icon": "roof",
+  "summary": "Crews ready before storm season, and every inspection call and estimate followed up.",
+  "seo": {
+    "title": "Hiring and office support for roofing companies",
+    "description": "We hire roofers, crew leads and estimators, and we call back storm leads, book inspections and collect final payments. One flat monthly fee."
+  },
+  "hero": {
+    "headline": "Crews on the roof. Calls answered on the ground.",
+    "subhead": "We hire your roofers and crew leads, and we handle the calls, estimates and payments that pile up while you're up on a job."
+  },
+  "roles": {
+    "field": [
+      { "title": "Roofers and installers", "note": "Shingle, metal and flat-roof crew members." },
+      { "title": "Crew leads and foremen", "note": "People who can run a crew without you on site." },
+      { "title": "Laborers and ground crew", "note": "Tear-off, cleanup and material handling." },
+      { "title": "Repair techs", "note": "For leak calls and small repair jobs." },
+      { "title": "Gutter and siding installers", "note": "If you offer more than roofs." }
+    ],
+    "office": [
+      { "title": "Estimators", "note": "People who measure, write estimates and walk homeowners through them." },
+      { "title": "Office coordinators", "note": "Scheduling crews, materials and start dates." },
+      { "title": "Customer service reps", "note": "Answering the phone when storm calls come in." }
+    ]
+  },
+  "officeTasks": [
+    { "title": "Call back storm leads the same day", "detail": "After a storm, we work through the calls and web leads so they don't go to the next roofer on the list." },
+    { "title": "Book inspections and estimate visits", "detail": "We set the appointments on your calendar and confirm them with the homeowner." },
+    { "title": "Follow up on open estimates", "detail": "We check in with homeowners who haven't signed yet, so fewer estimates go cold." },
+    { "title": "Keep homeowners updated", "detail": "Start dates, weather delays and what to expect on install day." },
+    { "title": "Collect deposits and final payments", "detail": "We send reminders and follow up on unpaid invoices until they're paid." }
+  ],
+  "pains": [
+    "After a storm my phone doesn't stop, and I'm up on a roof for all of it.",
+    "I hire guys in the spring, and by July half of them are gone.",
+    "I've got a stack of estimates out and no time to call a single one back."
+  ],
+  "faqs": [
+    { "q": "Can you help us staff up before storm season?", "a": "Yes. Tell us how many people you'll need and when, and we'll start lining up candidates ahead of time instead of after the rush hits." },
+    { "q": "Do you hire crew leads, or just laborers?", "a": "Both. We hire for every level of a roofing crew, from ground crew to foremen who can run a job without you there." },
+    { "q": "Can you follow up with homeowners who are waiting on their insurance?", "a": "Yes. We keep in touch with homeowners, remind them what's needed from them, and follow up on payments. We don't act as a public adjuster or handle the claim itself." },
+    { "q": "Do you hire subcontractors?", "a": "We focus on the people you hire onto your own team. If you work with sub crews, bring it up on the call and we'll tell you straight what we can help with." },
+    { "q": "Our busy season and slow season are very different. Does that work?", "a": "Yes. We'll talk through your seasons on the first call and plan the work around them." }
+  ],
+  "cta": {
+    "heading": "Get ahead of the next storm.",
+    "body": "Book a short call. Tell us how many people you need and which calls you're missing, and we'll tell you how we'd handle it."
+  }
+}
