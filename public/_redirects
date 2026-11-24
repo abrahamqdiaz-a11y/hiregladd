@@ -1,0 +1,5 @@
+# Netlify redirects. Format: <from> <to> <status>
+# Links on the site that point at a "from" path are treated as working links
+# (see lib/pages.ts), as long as the "to" page exists.
+/cleaning-companies    /industries/commercial-cleaning/    301
+/cleaning-companies/   /industries/commercial-cleaning/    301
