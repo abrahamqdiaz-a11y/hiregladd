@@ -4,14 +4,8 @@ import Link from "next/link";
 export function Logo({ dark = false }: { dark?: boolean }) {
   return (
     <Link href="/" aria-label="HireGladd home" className="inline-flex items-center gap-2.5">
-      <span
-        aria-hidden="true"
-        className={`inline-flex h-9 w-9 items-center justify-center rounded-lg text-lg font-extrabold ${
-          dark ? "bg-white text-accent" : "bg-accent text-white"
-        }`}
-      >
-        H
-      </span>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/logo-mark.svg" alt="" width={36} height={36} className="h-9 w-9 rounded-lg" />
       <span className={`text-2xl font-extrabold tracking-tight ${dark ? "text-white" : "text-ink"}`}>
         <span className={dark ? "text-accent-glow" : "text-accent"}>Hire</span>Gladd
       </span>
