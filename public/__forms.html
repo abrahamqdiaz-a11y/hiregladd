@@ -3,7 +3,7 @@
 <head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Forms</title></head>
 <body>
   <!--
-    Netlify reads this file at deploy time to detect the "contact" form.
+    Netlify reads this file at deploy time to detect the "contact" and "unsubscribe" forms.
     It is never shown to visitors. Keep the field names in sync with
     components/ContactForm.tsx.
   -->
@@ -17,6 +17,14 @@
     <input name="phone" type="tel">
     <input name="email" type="email">
     <textarea name="handoff"></textarea>
+  </form>
+
+  <!-- Unsubscribe form: keep in sync with components/UnsubscribeForm.tsx -->
+  <form name="unsubscribe" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="unsubscribe">
+    <input name="bot-field">
+    <input name="email" type="email">
+    <select name="reason"><option value="Other">Other</option></select>
   </form>
 </body>
 </html>
