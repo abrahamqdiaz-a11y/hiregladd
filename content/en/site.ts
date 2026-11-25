@@ -31,6 +31,11 @@ export const site = {
       { label: "Roofing", href: "/industries/roofing/" },
       { label: "HVAC, Plumbing & Electrical", href: "/industries/hvac-plumbing-electrical/" },
     ],
+    resources: [
+      { label: "Articles", href: "/articles/" },
+      { label: "All industries", href: "/industries/" },
+      { label: "About", href: "/about/" },
+    ],
     company: [
       { label: "How it works", href: "/#how-it-works" },
       { label: "FAQ", href: "/#faq" },

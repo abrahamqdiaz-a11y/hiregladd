@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getIndustries, getIndustry } from "@/lib/industries";
 import { getCities, cityPath } from "@/lib/cities";
+import { articlesFor, articlePath } from "@/lib/articles";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { industryServiceSchema, faqSchema } from "@/lib/schema";
@@ -59,6 +60,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
   const industry = getIndustry(slug);
   if (!industry) notFound();
   const cities = getCities().filter((c) => c.industry === industry.slug);
+  const related = articlesFor(industry.slug);
 
   return (
     <>
@@ -176,6 +178,27 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
                   <span className="mt-2 flex-1 text-muted">{c.summary}</span>
                   <span className="mt-4 inline-flex items-center gap-2 font-bold text-accent">
                     See {c.name}
+                    <Icon name="arrow" className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
+
+      {related.length > 0 && (
+        <Section labelledBy="reading-heading">
+          <Eyebrow>Articles</Eyebrow>
+          <H2 id="reading-heading">Read next</H2>
+          <ul className="mt-8 grid gap-5 md:grid-cols-2">
+            {related.map((a) => (
+              <li key={a.slug}>
+                <Link href={articlePath(a)} className="group flex h-full flex-col rounded-2xl border border-line bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-accent hover:shadow-xl hover:shadow-accent/10">
+                  <span className="text-xl font-extrabold group-hover:text-accent">{a.title}</span>
+                  <span className="mt-2 flex-1 text-muted">{a.description}</span>
+                  <span className="mt-4 inline-flex items-center gap-2 font-bold text-accent">
+                    Read the article
                     <Icon name="arrow" className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </span>
                 </Link>

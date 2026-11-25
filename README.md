@@ -41,6 +41,10 @@ City pillar pages live at `/cleaning-companies/<city>/` and come from `content/e
 
 `/cleaning-companies` itself redirects to `/industries/commercial-cleaning/` (see `public/_redirects`).
 
+### Articles
+
+Articles are Markdown files in `content/en/articles/<slug>.md`, served at `/articles/<slug>/`. The front matter options are documented at the top of `lib/articles.ts` (title, description, date, optional `updated`, `industries` and `draft`). Use `##` for section headings; they become the "In this article" list. An article tagged with `industries: [commercial-cleaning]` also shows under "Read next" on that industry page and its city pages. `draft: true` hides it on the live site.
+
 ## Contact form (Netlify Forms)
 
 - The form is `components/ContactForm.tsx`.

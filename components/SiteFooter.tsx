@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { site } from "@/content/en/site";
 import { pageExists } from "@/lib/pages";
+import { getCities, cityPath } from "@/lib/cities";
 import { isPlaceholder } from "@/lib/site";
 import { Logo } from "./Logo";
 
@@ -12,8 +13,8 @@ export function SiteFooter() {
 
   return (
     <footer className="on-dark bg-night text-white">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 md:grid-cols-4">
-        <div className="md:col-span-2">
+      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-10 px-5 py-16 sm:px-8 lg:grid-cols-6">
+        <div className="col-span-2">
           <Logo dark id="hg-mark-footer" />
           <p className="mt-4 max-w-sm text-white/75">{site.footer.tagline}</p>
           {(email || phone) && (
@@ -39,6 +40,11 @@ export function SiteFooter() {
         </div>
 
         <FooterLinks title="Industries" links={site.footer.industries} />
+        <FooterLinks
+          title="Cities"
+          links={getCities().map((c) => ({ label: `Cleaners in ${c.name}`, href: cityPath(c) }))}
+        />
+        <FooterLinks title="Resources" links={site.footer.resources} />
         <FooterLinks title="Company" links={site.footer.company} />
       </div>
       <div className="border-t border-white/10">

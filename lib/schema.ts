@@ -14,7 +14,7 @@ export function organizationSchema() {
     description:
       "Hiring, plus office support, for owner-run businesses, especially trade and service companies.",
     knowsLanguage: ["en", "es"],
-    parentOrganization: { "@type": "Organization", name: PARENT_COMPANY },
+    parentOrganization: { "@type": "Organization", name: PARENT_COMPANY, url: "https://echelonfox.com" },
   };
 }
 
@@ -89,5 +89,21 @@ export function breadcrumbSchema(items: { name: string; path: string }[]) {
       name: it.name,
       item: absoluteUrl(it.path),
     })),
+  };
+}
+
+export function articleSchema(a: { title: string; description: string; date: string; updated?: string }, path: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: a.title,
+    description: a.description,
+    datePublished: a.date,
+    dateModified: a.updated ?? a.date,
+    author: { "@id": ORG_ID },
+    publisher: { "@id": ORG_ID },
+    mainEntityOfPage: absoluteUrl(path),
+    image: absoluteUrl("/og.png"),
+    inLanguage: "en",
   };
 }

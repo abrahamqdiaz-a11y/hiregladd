@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCities, getCity, cityPath } from "@/lib/cities";
+import { articlesFor, articlePath } from "@/lib/articles";
 import { getIndustry } from "@/lib/industries";
 import { pageMetadata } from "@/lib/seo";
 import { cityServiceSchema, faqSchema, breadcrumbSchema } from "@/lib/schema";
@@ -38,6 +39,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
   const city = getCity(slug);
   if (!city) notFound();
   const industry = getIndustry(city.industry);
+  const related = articlesFor(city.industry);
   const industryPath = `/industries/${city.industry}/`;
   const others = getCities().filter((c) => c.slug !== city.slug && c.industry === city.industry);
   const crumbs = [
@@ -254,6 +256,27 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
           </p>
         )}
       </Section>
+
+      {related.length > 0 && (
+        <Section labelledBy="reading-heading">
+          <Eyebrow>Articles</Eyebrow>
+          <H2 id="reading-heading">Read next</H2>
+          <ul className="mt-8 grid gap-5 md:grid-cols-2">
+            {related.map((a) => (
+              <li key={a.slug}>
+                <Link href={articlePath(a)} className="group flex h-full flex-col rounded-2xl border border-line bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-accent hover:shadow-xl hover:shadow-accent/10">
+                  <span className="text-xl font-extrabold group-hover:text-accent">{a.title}</span>
+                  <span className="mt-2 flex-1 text-muted">{a.description}</span>
+                  <span className="mt-4 inline-flex items-center gap-2 font-bold text-accent">
+                    Read the article
+                    <Icon name="arrow" className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
 
       <CtaBand heading={city.cta.heading} body={city.cta.body} />
 

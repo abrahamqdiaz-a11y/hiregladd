@@ -8,12 +8,18 @@ export function pageMetadata({
   path,
   absoluteTitle = false,
   noindex = false,
+  type = "website",
+  published,
+  modified,
 }: {
   title: string;
   description: string;
   path: string;
   absoluteTitle?: boolean;
   noindex?: boolean;
+  type?: "website" | "article";
+  published?: string;
+  modified?: string;
 }): Metadata {
   const fullTitle = absoluteTitle ? title : `${title} | ${SITE_NAME}`;
   return {
@@ -22,7 +28,8 @@ export function pageMetadata({
     alternates: { canonical: path },
     robots: noindex ? { index: false, follow: true } : undefined,
     openGraph: {
-      type: "website",
+      type,
+      ...(type === "article" ? { publishedTime: published, modifiedTime: modified ?? published } : {}),
       siteName: SITE_NAME,
       locale: "en_US",
       url: absoluteUrl(path),
