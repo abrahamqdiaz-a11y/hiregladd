@@ -14,7 +14,7 @@ export function SiteFooter() {
     <footer className="on-dark bg-night text-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 md:grid-cols-4">
         <div className="md:col-span-2">
-          <Logo dark />
+          <Logo dark id="hg-mark-footer" />
           <p className="mt-4 max-w-sm text-white/75">{site.footer.tagline}</p>
           {(email || phone) && (
             <ul className="mt-4 space-y-1 text-base">
