@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
 import { getIndustries, getIndustry } from "@/lib/industries";
+import { getCities, cityPath } from "@/lib/cities";
+import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { industryServiceSchema, faqSchema } from "@/lib/schema";
 import { site } from "@/content/en/site";
@@ -56,6 +58,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const industry = getIndustry(slug);
   if (!industry) notFound();
+  const cities = getCities().filter((c) => c.industry === industry.slug);
 
   return (
     <>
@@ -157,6 +160,30 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
           </div>
         </Container>
       </section>
+
+      {cities.length > 0 && (
+        <Section tone="wash" labelledBy="cities-heading" id="cities">
+          <Eyebrow>Cities</Eyebrow>
+          <H2 id="cities-heading">Where we hire</H2>
+          <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {cities.map((c) => (
+              <li key={c.slug}>
+                <Link href={cityPath(c)} className="group flex h-full flex-col rounded-2xl border border-line bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-accent hover:shadow-xl hover:shadow-accent/10">
+                  <span className="flex items-center gap-2 text-xl font-extrabold">
+                    <Icon name="pin" className="h-5 w-5 text-accent" />
+                    {c.name}
+                  </span>
+                  <span className="mt-2 flex-1 text-muted">{c.summary}</span>
+                  <span className="mt-4 inline-flex items-center gap-2 font-bold text-accent">
+                    See {c.name}
+                    <Icon name="arrow" className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
 
       <FaqList heading={`${industry.name}: common questions`} items={industry.faqs} />
       <CtaBand heading={industry.cta.heading} body={industry.cta.body} />

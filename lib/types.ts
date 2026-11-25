@@ -23,3 +23,28 @@ export type Industry = {
   faqs: FAQ[];
   cta: { heading: string; body: string };
 };
+
+/** A city pillar page, e.g. /cleaning-companies/los-angeles/. One JSON file per city. */
+export type City = {
+  slug: string;
+  order: number;
+  /** Industry slug this page belongs to (links back to /industries/<industry>/). */
+  industry: string;
+  /** Short name for cards and breadcrumbs, e.g. "Los Angeles". */
+  name: string;
+  /** Longer place name for headings, e.g. "Los Angeles County". */
+  region: string;
+  summary: string;
+  seo: { title: string; description: string };
+  hero: { eyebrow: string; headline: string; subhead: string };
+  intro: string[];
+  /** Exactly 3, in the owner's own words. */
+  pains: string[];
+  challenges: { heading: string; items: { icon: string; title: string; body: string }[] };
+  roles: Role[];
+  areas: string[];
+  areasNote: string;
+  officeTasks: { title: string; detail: string }[];
+  faqs: FAQ[];
+  cta: { heading: string; body: string };
+};

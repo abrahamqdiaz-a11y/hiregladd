@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getIndustries } from "@/lib/industries";
+import { getCities, cityPath } from "@/lib/cities";
 import { absoluteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -16,6 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...getIndustries().map((i) => ({
       url: absoluteUrl(`/industries/${i.slug}/`),
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+    ...getCities().map((c) => ({
+      url: absoluteUrl(cityPath(c)),
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.8,

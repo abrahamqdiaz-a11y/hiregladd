@@ -35,6 +35,12 @@ Copy one of the files in `content/en/industries/`, give it a new `slug`, `order`
 
 Each industry must have its own roles, tasks, pains and FAQs. Don't copy text and only swap the industry name.
 
+### City pages (cleaning companies)
+
+City pillar pages live at `/cleaning-companies/<city>/` and come from `content/en/cities/*.json` (Los Angeles, Miami, Sarasota, DC/DMV). To add a city, copy one file, change the `slug`, `order` and content, and save. The page, the sitemap, the "We also hire in" links on the other city pages and the "Where we hire" list on the Commercial Cleaning page all update automatically. Write each city's pains, challenges, roles and FAQs for that market. Don't just swap the city name.
+
+`/cleaning-companies` itself redirects to `/industries/commercial-cleaning/` (see `public/_redirects`).
+
 ## Contact form (Netlify Forms)
 
 - The form is `components/ContactForm.tsx`.

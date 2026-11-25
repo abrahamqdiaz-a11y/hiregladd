@@ -1,0 +1,132 @@
+{
+  "slug": "sarasota",
+  "order": 3,
+  "industry": "commercial-cleaning",
+  "name": "Sarasota",
+  "region": "Sarasota and Manatee counties",
+  "summary": "Turnover crews and cleaners for season, found beyond the same small hiring pool.",
+  "seo": {
+    "title": "Hiring Cleaners in Sarasota",
+    "description": "We find and screen cleaners, turnover crews and supervisors for cleaning companies in Sarasota, Bradenton, Lakewood Ranch and Venice. One flat monthly fee."
+  },
+  "hero": {
+    "eyebrow": "Cleaning companies · Sarasota",
+    "headline": "Cleaners for Sarasota's busy season, found before it starts.",
+    "subhead": "We find and screen cleaners, turnover crews and supervisors for cleaning companies in Sarasota and Manatee counties, so you can say yes to the work when season comes."
+  },
+  "intro": [
+    "Sarasota is a smaller market than Miami or Tampa, and hiring feels it. The same good cleaners get calls from every cleaning company, hotel and property manager in town. Then winter comes, the population grows, the rentals fill up, and everyone needs more help at the same time.",
+    "HireGladd works as your hiring team. We find people, talk with them first, and send you only the ones who are ready to work. You interview and decide. You pay one flat monthly fee, so adding extra hands for season doesn't mean paying a fee for every person."
+  ],
+  "pains": [
+    "In January I'm turning down work because I don't have the people.",
+    "Saturday turnovers on the Keys are a scramble every single week.",
+    "I post an ad and hear back from the same few people who already worked for me."
+  ],
+  "challenges": {
+    "heading": "What makes hiring cleaners in Sarasota hard",
+    "items": [
+      {
+        "icon": "users",
+        "title": "A small pool of experienced cleaners.",
+        "body": "Everyone is recruiting the same people. We look further, talk with candidates first, and bring you people you haven't already seen."
+      },
+      {
+        "icon": "calendar",
+        "title": "Season changes everything.",
+        "body": "Winter brings seasonal residents and more visitors, and your workload jumps. We start lining up people ahead of time, so you're ready when it does."
+      },
+      {
+        "icon": "refresh",
+        "title": "Turnover days are tight.",
+        "body": "Vacation rentals often turn over on the same day, in a short window. We hire turnover cleaners who can work weekends and move fast."
+      },
+      {
+        "icon": "hardhat",
+        "title": "New construction keeps coming.",
+        "body": "Places like Lakewood Ranch and North Port keep building. We hire post-construction cleaners for new homes and offices."
+      }
+    ]
+  },
+  "roles": [
+    {
+      "title": "Vacation rental turnover cleaners",
+      "note": "Weekend changeovers on the Keys and near the beaches."
+    },
+    {
+      "title": "Residential and commercial cleaners",
+      "note": "Homes, offices and medical buildings."
+    },
+    {
+      "title": "Post-construction cleaners",
+      "note": "New homes and buildings in growing areas."
+    },
+    {
+      "title": "Floor and carpet techs",
+      "note": "Deep cleans, stripping, waxing and carpet care."
+    },
+    {
+      "title": "Team leads",
+      "note": "Someone who can run a turnover day or a building without you there."
+    },
+    {
+      "title": "Schedulers",
+      "note": "Matching cleaners to properties and covering call-outs."
+    }
+  ],
+  "areas": [
+    "Sarasota",
+    "Siesta Key",
+    "Longboat Key",
+    "Lakewood Ranch",
+    "Bradenton",
+    "Anna Maria Island",
+    "Venice",
+    "North Port"
+  ],
+  "areasNote": "We hire across Sarasota and Manatee counties. If you also work in Charlotte County or the Tampa Bay area, ask us on the call.",
+  "officeTasks": [
+    {
+      "title": "Answer owner and guest calls",
+      "detail": "We pick up, take the details and get the job on your schedule."
+    },
+    {
+      "title": "Follow up on quotes",
+      "detail": "We check in with homeowners and property managers until you get a yes or a no."
+    },
+    {
+      "title": "Chase unpaid invoices",
+      "detail": "We follow up on open balances so you get paid."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can you help us hire for winter season?",
+      "a": "Yes. Tell us how many people you'll need and when. We start lining up candidates before season, so you're not hiring in the middle of it."
+    },
+    {
+      "q": "Do you hire vacation rental turnover cleaners?",
+      "a": "Yes. We hire cleaners who can work weekend turnovers and tight same-day windows."
+    },
+    {
+      "q": "Do you cover Bradenton and Lakewood Ranch?",
+      "a": "Yes. We hire across Sarasota and Manatee counties, including Bradenton, Lakewood Ranch, Venice and North Port."
+    },
+    {
+      "q": "Can you hire Spanish-speaking cleaners?",
+      "a": "Yes. We talk with candidates in English and Spanish."
+    },
+    {
+      "q": "What if a new hire quits in the first month?",
+      "a": "If they leave in their first 30 days, we find a replacement at no extra cost."
+    },
+    {
+      "q": "How much does it cost?",
+      "a": "One flat monthly fee, based on how many people you need. We'll give you the price on a short call. No per-hire fees."
+    }
+  ],
+  "cta": {
+    "heading": "Be ready before season.",
+    "body": "Book a short call. Tell us how many people you'll need this season, and we'll tell you plainly how we'd find them."
+  }
+}

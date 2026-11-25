@@ -1,0 +1,133 @@
+{
+  "slug": "los-angeles",
+  "order": 1,
+  "industry": "commercial-cleaning",
+  "name": "Los Angeles",
+  "region": "Los Angeles County",
+  "summary": "Night cleaners, day porters and floor techs hired close to your buildings, across LA County.",
+  "seo": {
+    "title": "Hiring Cleaners in Los Angeles",
+    "description": "We find and screen cleaners, day porters, floor techs and supervisors for cleaning companies across Los Angeles. One flat monthly fee. English and Spanish."
+  },
+  "hero": {
+    "eyebrow": "Cleaning companies · Los Angeles",
+    "headline": "Cleaners for your Los Angeles buildings, hired close to the job.",
+    "subhead": "We find and screen cleaners, floor techs and supervisors for cleaning companies across LA, so your night shifts stay covered and you stop driving across town to fill in."
+  },
+  "intro": [
+    "Running a cleaning company in Los Angeles means covering buildings spread across a huge area, mostly at night, with a crew that can leave for a job a few dollars more or a few miles closer. When someone quits, the building still has to be cleaned tonight.",
+    "HireGladd works as your hiring team. We find people, talk with them first in English or Spanish, and send you only the ones who are ready to work. You interview, you decide. You pay one flat monthly fee, not a cut of every hire."
+  ],
+  "pains": [
+    "I hire someone in the Valley for a building in Long Beach, and two weeks later they're gone.",
+    "My night cleaners have day jobs too. One schedule change and I lose them.",
+    "Every time we win a new account, I'm hiring from zero and covering shifts myself."
+  ],
+  "challenges": {
+    "heading": "What makes hiring cleaners in LA hard",
+    "items": [
+      {
+        "icon": "pin",
+        "title": "The drive is why people quit.",
+        "body": "A long drive across LA is one of the fastest ways to lose a cleaner. We look for people who live near your buildings, so the commute isn't the reason they leave."
+      },
+      {
+        "icon": "moon",
+        "title": "Night and split shifts.",
+        "body": "Many good cleaners already have a day job. We ask about their schedule up front, so you only meet people who can keep yours."
+      },
+      {
+        "icon": "tag",
+        "title": "Pay rules change from city to city.",
+        "body": "The City of Los Angeles and several nearby cities set their own minimum wage, so pay can differ from one building to the next. You set the pay, and we tell candidates up front."
+      },
+      {
+        "icon": "chat",
+        "title": "English and Spanish.",
+        "body": "Many of the best cleaners in LA speak Spanish first. We screen and talk with candidates in either language."
+      }
+    ]
+  },
+  "roles": [
+    {
+      "title": "Night janitorial cleaners",
+      "note": "Offices, medical buildings and schools after hours."
+    },
+    {
+      "title": "Day porters",
+      "note": "Restrooms, lobbies and common areas while tenants are in."
+    },
+    {
+      "title": "Floor techs",
+      "note": "Stripping, waxing, scrubbing and carpet extraction."
+    },
+    {
+      "title": "Team leads and site supervisors",
+      "note": "Someone who can run a building and handle the walkthrough."
+    },
+    {
+      "title": "Post-construction cleaners",
+      "note": "New builds and tenant improvements."
+    },
+    {
+      "title": "Schedulers and account reps",
+      "note": "Covering call-outs and keeping property managers happy."
+    }
+  ],
+  "areas": [
+    "Downtown LA",
+    "Hollywood",
+    "Westside and Santa Monica",
+    "Culver City",
+    "San Fernando Valley",
+    "Burbank and Glendale",
+    "Pasadena and San Gabriel Valley",
+    "South Bay",
+    "Long Beach"
+  ],
+  "areasNote": "We hire across Los Angeles County. If your buildings are elsewhere in Southern California, ask us on the call.",
+  "officeTasks": [
+    {
+      "title": "Follow up on bids",
+      "detail": "We check in with property managers after your walkthroughs until you get a yes or a no."
+    },
+    {
+      "title": "Answer client requests",
+      "detail": "We reply quickly to building managers and make sure the request reaches the right person."
+    },
+    {
+      "title": "Collect late payments",
+      "detail": "We follow up on unpaid invoices so you're not floating payroll."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do you hire for night shifts in Los Angeles?",
+      "a": "Yes. Most of the cleaning roles we fill in LA are evenings, overnights and weekends. We ask about schedules before you ever meet a candidate."
+    },
+    {
+      "q": "Can you find cleaners who live near a specific building?",
+      "a": "Yes. Tell us where your buildings are, and we focus on people within a reasonable drive of them."
+    },
+    {
+      "q": "Our buildings are in different LA cities with different pay. Can you handle that?",
+      "a": "Yes. You set the pay for each building, and we tell candidates the pay up front, so there are no surprises in the interview."
+    },
+    {
+      "q": "Can you hire Spanish-speaking cleaners?",
+      "a": "Yes. We talk with candidates in English and Spanish."
+    },
+    {
+      "q": "What if a new hire quits in the first month?",
+      "a": "If they leave in their first 30 days, we find a replacement at no extra cost."
+    },
+    {
+      "q": "How much does it cost?",
+      "a": "One flat monthly fee, based on how many people you need. We'll give you the price on a short call. No per-hire fees."
+    }
+  ],
+  "cta": {
+    "heading": "Keep your LA buildings covered.",
+    "body": "Book a short call. Tell us which shifts you can't keep filled, and we'll tell you plainly how we'd fill them."
+  }
+}

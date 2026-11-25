@@ -1,5 +1,5 @@
 import { SITE_NAME, SITE_URL, PARENT_COMPANY, absoluteUrl } from "./site";
-import type { FAQ, Industry } from "./types";
+import type { City, FAQ, Industry } from "./types";
 
 const ORG_ID = `${SITE_URL}/#organization`;
 
@@ -68,6 +68,26 @@ export function faqSchema(items: FAQ[]) {
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+}
+
+export function cityServiceSchema(c: City, path: string) {
+  return {
+    ...service(`Hiring for cleaning companies in ${c.region}`, c.seo.description, "Cleaning companies", path),
+    areaServed: [{ "@type": "AdministrativeArea", name: c.region }, ...c.areas.map((a) => ({ "@type": "Place", name: a }))],
+  };
+}
+
+export function breadcrumbSchema(items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: it.name,
+      item: absoluteUrl(it.path),
     })),
   };
 }

@@ -1,0 +1,131 @@
+{
+  "slug": "washington-dc",
+  "order": 4,
+  "industry": "commercial-cleaning",
+  "name": "DC, Maryland & Virginia",
+  "region": "the DC area (DMV)",
+  "summary": "Office cleaning crews and day porters for DC, Maryland and Northern Virginia, lined up before a contract starts.",
+  "seo": {
+    "title": "Hiring Cleaners in the DC Area (DMV)",
+    "description": "We find and screen cleaners, day porters, floor techs and supervisors for cleaning companies across DC, Maryland and Northern Virginia. One flat monthly fee."
+  },
+  "hero": {
+    "eyebrow": "Cleaning companies · DC, Maryland & Virginia",
+    "headline": "Office cleaning crews for the DMV, lined up before the contract starts.",
+    "subhead": "We find and screen cleaners, day porters and supervisors for cleaning companies across DC, Maryland and Northern Virginia, so a new contract or a badge wait doesn't leave you short."
+  },
+  "intro": [
+    "Cleaning in the DMV is mostly offices: downtown DC, Tysons, Arlington, Bethesda, Rockville. Many buildings need a background check or a building badge before a cleaner can start, and that takes time. When someone quits, you can't just send a new person tomorrow.",
+    "HireGladd works as your hiring team. We find people, talk with them first in English or Spanish, and send you only the ones who are ready to work. You interview, you decide. You pay one flat monthly fee, not a cut of every hire."
+  ],
+  "pains": [
+    "We won the contract, and now I need a full night crew by the first of the month.",
+    "My new hire is ready, but the badge isn't, so I'm covering the shift myself.",
+    "One building is in DC, one is in Maryland, one is in Virginia, and each has its own rules."
+  ],
+  "challenges": {
+    "heading": "What makes hiring cleaners in the DMV hard",
+    "items": [
+      {
+        "icon": "shield",
+        "title": "Badges and background checks.",
+        "body": "Many government and office buildings require a background check or a badge before someone can start. We keep candidates lined up, so the wait doesn't leave a shift empty."
+      },
+      {
+        "icon": "tag",
+        "title": "Three sets of rules.",
+        "body": "DC, Maryland and Virginia each set their own pay rules, and some counties add their own. You set the pay for each building, and we tell candidates up front."
+      },
+      {
+        "icon": "moon",
+        "title": "Late shifts and long trips home.",
+        "body": "Office cleaning shifts often end late. We look for people who can get to your buildings and back, by car or by transit."
+      },
+      {
+        "icon": "chat",
+        "title": "English and Spanish.",
+        "body": "Many experienced cleaners in the DMV speak Spanish first. We screen and talk with candidates in either language."
+      }
+    ]
+  },
+  "roles": [
+    {
+      "title": "Office cleaners",
+      "note": "Night crews for office buildings and government-contract sites."
+    },
+    {
+      "title": "Day porters",
+      "note": "Restrooms, lobbies, conference rooms and quick cleanups while tenants are in."
+    },
+    {
+      "title": "Floor techs",
+      "note": "Stripping, waxing and carpet care, often on weekends."
+    },
+    {
+      "title": "Site supervisors and leads",
+      "note": "People who can run a building and walk through inspections."
+    },
+    {
+      "title": "Post-construction cleaners",
+      "note": "Build-outs and new office space."
+    },
+    {
+      "title": "Account managers and schedulers",
+      "note": "Covering call-outs and staying in touch with building managers."
+    }
+  ],
+  "areas": [
+    "Washington, DC",
+    "Arlington and Alexandria",
+    "Tysons and Fairfax County",
+    "Reston and Loudoun County",
+    "Bethesda and Silver Spring",
+    "Rockville and Gaithersburg",
+    "Prince George's County"
+  ],
+  "areasNote": "We hire across DC, suburban Maryland and Northern Virginia. If your contracts reach Baltimore or Richmond, ask us on the call.",
+  "officeTasks": [
+    {
+      "title": "Follow up on bids and proposals",
+      "detail": "We check in with facility managers until you get an answer."
+    },
+    {
+      "title": "Answer building managers quickly",
+      "detail": "We reply, log the request and get it to the right supervisor."
+    },
+    {
+      "title": "Chase late payments",
+      "detail": "We follow up on unpaid invoices so you're not floating payroll."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can you staff a new contract quickly?",
+      "a": "Tell us how many people you need and the start date. We start lining up candidates right away, and we'll tell you plainly on the call what's realistic."
+    },
+    {
+      "q": "Who runs background checks?",
+      "a": "You do, or the building does, the same as now. We keep enough candidates lined up so a long check doesn't leave you short."
+    },
+    {
+      "q": "Do you hire in DC, Maryland and Virginia?",
+      "a": "Yes. We hire across DC, suburban Maryland and Northern Virginia."
+    },
+    {
+      "q": "Can you hire day porters as well as night crews?",
+      "a": "Yes. We hire day porters, night cleaners, floor techs and supervisors."
+    },
+    {
+      "q": "What if a new hire quits in the first month?",
+      "a": "If they leave in their first 30 days, we find a replacement at no extra cost."
+    },
+    {
+      "q": "How much does it cost?",
+      "a": "One flat monthly fee, based on how many people you need. We'll give you the price on a short call. No per-hire fees."
+    }
+  ],
+  "cta": {
+    "heading": "Staff your next contract before it starts.",
+    "body": "Book a short call. Tell us how many people you need and when, and we'll tell you plainly how we'd find them."
+  }
+}

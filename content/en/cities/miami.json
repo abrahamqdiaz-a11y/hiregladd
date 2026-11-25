@@ -1,0 +1,132 @@
+{
+  "slug": "miami",
+  "order": 2,
+  "industry": "commercial-cleaning",
+  "name": "Miami",
+  "region": "Miami-Dade and Broward",
+  "summary": "Bilingual cleaners, porters and turnover crews, staffed up before winter season.",
+  "seo": {
+    "title": "Hiring Cleaners in Miami",
+    "description": "We find and screen cleaners, porters, turnover crews and supervisors for cleaning companies in Miami-Dade and Broward. Flat monthly fee. English and Spanish."
+  },
+  "hero": {
+    "eyebrow": "Cleaning companies · Miami",
+    "headline": "Bilingual cleaning crews for Miami, ready before season starts.",
+    "subhead": "We find and screen cleaners, porters and supervisors for cleaning companies across Miami-Dade and Broward, in Spanish or English, so you're staffed up before the busy months."
+  },
+  "intro": [
+    "In Miami, the work doesn't come in evenly. Winter brings more visitors, more seasonal residents and more units to turn over. Storm season can bring a rush of cleanup work with little notice. Your crew has to grow when the work does, and you can't spend every week hiring.",
+    "HireGladd works as your hiring team. We find people, talk with them first in English or Spanish, and send you only the ones who are ready to work. You interview, you decide. You pay one flat monthly fee, not a cut of every hire."
+  ],
+  "pains": [
+    "Every November I need more people than I have, and I start hiring when it's already too late.",
+    "The condo lobby has to be spotless by 7 a.m., and my cleaner didn't show.",
+    "Half my applicants never pick up the phone, and the good ones get hired by the hotels first."
+  ],
+  "challenges": {
+    "heading": "What makes hiring cleaners in Miami hard",
+    "items": [
+      {
+        "icon": "calendar",
+        "title": "Busy season comes all at once.",
+        "body": "Winter brings more visitors, seasonal residents and short-term rentals. We start lining up people before the rush, so you're not hiring in the middle of it."
+      },
+      {
+        "icon": "users",
+        "title": "You're competing with the hotels.",
+        "body": "Hotels and resorts hire cleaners and housekeepers too. We move fast on good candidates, so they don't take another offer before you call."
+      },
+      {
+        "icon": "chat",
+        "title": "Spanish comes first for many cleaners.",
+        "body": "Many of the best cleaners in Miami speak Spanish first. We screen, interview and follow up with them in Spanish."
+      },
+      {
+        "icon": "droplet",
+        "title": "Storm season.",
+        "body": "After a storm, cleanup work can jump overnight. We help you add people quickly when the work comes in."
+      }
+    ]
+  },
+  "roles": [
+    {
+      "title": "Commercial cleaners",
+      "note": "Offices, medical buildings and retail after hours."
+    },
+    {
+      "title": "Building porters",
+      "note": "Lobbies, gyms, pool areas and common spaces in residential towers."
+    },
+    {
+      "title": "Turnover cleaners and housekeepers",
+      "note": "Short-term rentals and furnished units between guests."
+    },
+    {
+      "title": "Floor techs",
+      "note": "Stripping, waxing and polishing tile and terrazzo."
+    },
+    {
+      "title": "Bilingual team leads",
+      "note": "People who can run a site and talk with the property manager."
+    },
+    {
+      "title": "Post-construction cleaners",
+      "note": "New towers and renovations."
+    }
+  ],
+  "areas": [
+    "Downtown Miami and Brickell",
+    "Miami Beach",
+    "Coral Gables",
+    "Doral",
+    "Hialeah",
+    "Kendall",
+    "Aventura",
+    "Fort Lauderdale and Broward County"
+  ],
+  "areasNote": "We hire across Miami-Dade and Broward. If your work reaches into Palm Beach County, ask us on the call.",
+  "officeTasks": [
+    {
+      "title": "Book walkthroughs and follow up on bids",
+      "detail": "We set up site visits and check in with property managers until you get an answer."
+    },
+    {
+      "title": "Reply to property managers fast",
+      "detail": "Building and condo managers expect quick answers. We respond and get the request to the right person."
+    },
+    {
+      "title": "Chase late payments",
+      "detail": "We follow up on unpaid invoices, in English or Spanish."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can you help us staff up before winter season?",
+      "a": "Yes. Tell us how many people you'll need and when, and we'll start lining up candidates before the busy months."
+    },
+    {
+      "q": "Do you talk with candidates in Spanish?",
+      "a": "Yes. We screen, interview and follow up with candidates in Spanish or English, whichever they prefer."
+    },
+    {
+      "q": "Can you hire for condo buildings and short-term rentals?",
+      "a": "Yes. We hire porters for residential towers and turnover cleaners for short-term rentals, as well as commercial cleaners."
+    },
+    {
+      "q": "Do you hire in Broward County too?",
+      "a": "Yes. We hire across Miami-Dade and Broward."
+    },
+    {
+      "q": "What if a new hire quits in the first month?",
+      "a": "If they leave in their first 30 days, we find a replacement at no extra cost."
+    },
+    {
+      "q": "How much does it cost?",
+      "a": "One flat monthly fee, based on how many people you need. We'll give you the price on a short call. No per-hire fees."
+    }
+  ],
+  "cta": {
+    "heading": "Get staffed up before season.",
+    "body": "Book a short call. Tell us how many people you'll need and when, and we'll tell you plainly how we'd find them."
+  }
+}

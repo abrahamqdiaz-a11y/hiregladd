@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { getIndustry } from "./industries";
+import { getCity } from "./cities";
 
 const norm = (href: string) => href.split("#")[0].replace(/^\/+|\/+$/g, "");
 
@@ -26,6 +27,8 @@ export function pageExists(href: string, depth = 0): boolean {
   const clean = norm(href);
   const industry = clean.match(/^industries\/([^/]+)$/);
   if (industry) return Boolean(getIndustry(industry[1]));
+  const city = clean.match(/^cleaning-companies\/([^/]+)$/);
+  if (city) return Boolean(getCity(city[1]));
   if (fs.existsSync(path.join(process.cwd(), "app", clean, "page.tsx"))) return true;
   const target = redirects().get(clean);
   return Boolean(target && depth < 3 && pageExists(target, depth + 1));
